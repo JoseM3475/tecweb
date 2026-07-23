@@ -1,0 +1,53 @@
+/* Estilo veraniego */
+
+body {
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    background: linear-gradient(135deg, #87CEEB, #FFD54F);
+    margin: 0;
+    padding: 50px;
+    text-align: center;
+    min-height: 100vh;
+}
+
+#fechaHora {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: rgba(0, 105, 148, 0.8);
+    padding: 15px;
+    border-radius: 30px;
+    display: inline-block;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.contenedor {
+    background: rgba(255,255,255,0.95);
+    max-width: 900px;
+    margin: auto;
+    padding: 40px;
+    border-radius: 25px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    border: 5px solid #00B8D4;
+}
+
+h1 {
+    color: #006699;
+    font-size: 3em;
+    text-shadow: 2px 2px 4px rgba(255, 193, 7, 0.5);
+}
+
+p {
+    color: #333;
+    font-size: 1.6em;
+    line-height: 1.5;
+}
+
+strong {
+    color: #FF6F00;
+}
+
+.contenedor:hover {
+    transform: scale(1.02);
+    transition: 0.5s;
+}
