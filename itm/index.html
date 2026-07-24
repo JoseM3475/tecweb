@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>CSIF Jaén - Página de prueba</title>
+
+<style>
+
+*{
+    box-sizing:border-box;
+}
+
+body{
+
+    margin:0;
+    min-height:100vh;
+
+    font-family:'Segoe UI',Arial,sans-serif;
+
+    background:linear-gradient(
+        #87CEEB,
+        #bdefff 55%,
+        #fff3c4
+    );
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    overflow:hidden;
+
+}
+
+
+/* SOL */
+
+#sol{
+
+    position:fixed;
+
+    left:80%;
+    top:50px;
+
+    font-size:80px;
+
+    cursor:grab;
+
+    user-select:none;
+
+    z-index:20;
+
+}
+
+
+#sol:active{
+
+    cursor:grabbing;
+
+}
+
+
+
+/* PANEL */
+
+.contenedor{
+
+    width:650px;
+
+    background:rgba(255,255,255,.9);
+
+    padding:35px;
+
+    border-radius:25px;
+
+    text-align:center;
+
+    box-shadow:
+    0 15px 40px rgba(0,100,150,.3);
+
+    z-index:5;
+
+}
+
+
+
+h1{
+
+    color:#0077b6;
+
+}
+
+
+
+p{
+
+    color:#064663;
+
+    font-size:18px;
+
+}
+
+
+
+
+#reloj{
+
+    background:#023e8a;
+
+    color:white;
+
+    width:max-content;
+
+    margin:20px auto;
+
+    padding:15px 35px;
+
+    border-radius:20px;
+
+    font-size:40px;
+
+    font-family:monospace;
+
+}
+
+
+
+
+#temperatura{
+
+    background:#fff3cd;
+
+    color:#d35400;
+
+    padding:15px 25px;
+
+    border-radius:30px;
+
+    font-size:25px;
+
+    margin:20px;
+
+}
+
+
+
+
+/* BOTONES */
+
+.botones{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+}
+
+
+
+.grupoBoton{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+}
+
+
+
+button{
+
+    color:white;
+
+    border:0;
+
+    padding:15px 20px;
+
+    border-radius:30px;
+
+    font-size:16px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.15s;
+
+}
+
+
+
+button:hover{
+
+    transform:translateY(-5px);
+
+}
+
+
+button:active{
+
+    transform:scale(.9);
+
+}
+
+
+
+.rojo{
+
+    background:#e63946;
+
+    box-shadow:0 6px #8d001b;
+
+}
+
+
+
+.verde{
+
+    background:#43aa8b;
+
+    box-shadow:0 6px #155d27;
+
+}
+
+
+
+.azul{
+
+    background:#219ebc;
+
+    box-shadow:0 6px #023e8a;
+
+}
+
+
+
+.contador{
+
+    margin-top:10px;
+
+    background:white;
+
+    padding:8px 15px;
+
+    border-radius:20px;
+
+    color:#0077b6;
+
+    font-weight:bold;
+
+}
+
+
+
+
+/* OLAS */
+
+.mar{
+
+    position:fixed;
+
+    bottom:0;
+
+    left:0;
+
+    width:100%;
+
+    height:130px;
+
+    overflow:hidden;
+
+    z-index:1;
+
+}
+
+
+
+.ola{
+
+    position:absolute;
+
+    width:200%;
+
+    height:130px;
+
+    background:#0096c7;
+
+    border-radius:50% 50% 0 0;
+
+    animation:moverOla 6s linear infinite;
+
+}
+
+
+
+.ola:nth-child(2){
+
+    background:#48cae4;
+
+    bottom:-20px;
+
+    animation-duration:8s;
+
+}
+
+
+
+.ola:nth-child(3){
+
+    background:#90e0ef;
+
+    bottom:-45px;
+
+    animation-duration:10s;
+
+}
+
+
+
+@keyframes moverOla{
+
+    from{
+
+        transform:translateX(0);
+
+    }
+
+    to{
+
+        transform:translateX(-50%);
+
+    }
+
+}
+
+
+
+/* CONFETI */
+
+.confeti{
+
+    position:fixed;
+
+    border-radius:3px;
+
+    pointer-events:none;
+
+    z-index:50;
+
+    animation:caer 1.8s forwards;
+
+}
+
+
+
+@keyframes caer{
+
+    from{
+
+        transform:translate(0,0) rotate(0);
+
+        opacity:1;
+
+    }
+
+    to{
+
+        transform:
+        translate(var(--x),var(--y))
+        rotate(720deg);
+
+        opacity:0;
+
+    }
+
+}
+
+
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div id="sol">☀️</div>
+
+
+
+<div class="contenedor">
+
+
+<h1>¡Bienvenidos!</h1>
+
+
+<p>
+Saludos desde el ordenador del CSIF de Jaén,
+esta es una prueba de página WEB.
+</p>
+
+
+
+<div id="reloj">
+00:00:00
+</div>
+
+
+
+<div id="temperatura">
+🌡️ Temperatura: 25 ºC
+</div>
+
+
+
+<div class="botones">
+
+
+<div class="grupoBoton">
+
+<button class="rojo" onclick="clickBoton(1,'#e63946')">
+🔴 Botón Rojo
+</button>
+
+<div class="contador">
+Clicks: <span id="c1">0</span>
+</div>
+
+</div>
+
+
+
+<div class="grupoBoton">
+
+<button class="verde" onclick="clickBoton(2,'#43aa8b')">
+🟢 Botón Verde
+</button>
+
+<div class="contador">
+Clicks: <span id="c2">0</span>
+</div>
+
+</div>
+
+
+
+
+<div class="grupoBoton">
+
+<button class="azul" onclick="clickBoton(3,'#219ebc')">
+🔵 Botón Azul
+</button>
+
+<div class="contador">
+Clicks: <span id="c3">0</span>
+</div>
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+<div class="mar">
+
+<div class="ola"></div>
+<div class="ola"></div>
+<div class="ola"></div>
+
+</div>
+
+
+
+
+
+<script>
+
+
+/* RELOJ */
+
+function reloj(){
+
+let d=new Date();
+
+document.getElementById("reloj").innerHTML=
+
+String(d.getHours()).padStart(2,"0")
++":"
++String(d.getMinutes()).padStart(2,"0")
++":"
++String(d.getSeconds()).padStart(2,"0");
+
+}
+
+setInterval(reloj,1000);
+
+reloj();
+
+
+
+
+
+/* TEMPERATURA */
+
+function temperatura(){
+
+let t=(20+Math.random()*10).toFixed(1);
+
+document.getElementById("temperatura").innerHTML=
+
+"🌡️ Temperatura: "+t+" ºC";
+
+}
+
+
+setInterval(temperatura,5000);
+
+temperatura();
+
+
+
+
+
+
+
+/* CONTADORES */
+
+let contador=[0,0,0];
+
+
+function clickBoton(n,color){
+
+contador[n-1]++;
+
+
+document.getElementById("c"+n).innerHTML=
+contador[n-1];
+
+
+if(contador[n-1]%10===0){
+
+confeti(color,n);
+
+}
+
+}
+
+
+
+
+function confeti(color,n){
+
+
+let boton=document.querySelectorAll("button")[n-1];
+
+let r=boton.getBoundingClientRect();
+
+
+
+for(let i=0;i<250;i++){
+
+
+let pieza=document.createElement("div");
+
+pieza.className="confeti";
+
+
+pieza.style.background=color;
+
+
+pieza.style.width=
+(8+Math.random()*12)+"px";
+
+
+pieza.style.height=
+(8+Math.random()*12)+"px";
+
+
+pieza.style.left=
+(r.left+r.width/2)+"px";
+
+
+pieza.style.top=
+(r.top+r.height/2)+"px";
+
+
+
+pieza.style.setProperty(
+"--x",
+(Math.random()*600-300)+"px"
+);
+
+
+pieza.style.setProperty(
+"--y",
+(Math.random()*600-300)+"px"
+);
+
+
+
+document.body.appendChild(pieza);
+
+
+setTimeout(()=>pieza.remove(),1800);
+
+
+}
+
+
+}
+
+
+
+
+
+
+/* FÍSICA DEL SOL */
+
+
+let sol=document.getElementById("sol");
+
+
+let x=window.innerWidth-150;
+
+let y=50;
+
+
+let vx=0;
+
+let vy=0;
+
+
+let arrastrando=false;
+
+
+let offsetX=0;
+
+let offsetY=0;
+
+
+
+sol.onmousedown=function(e){
+
+arrastrando=true;
+
+offsetX=e.clientX-x;
+
+offsetY=e.clientY-y;
+
+};
+
+
+
+
+document.onmousemove=function(e){
+
+if(arrastrando){
+
+let nx=e.clientX-offsetX;
+
+let ny=e.clientY-offsetY;
+
+
+vx=nx-x;
+
+vy=ny-y;
+
+
+x=nx;
+
+y=ny;
+
+
+sol.style.left=x+"px";
+
+sol.style.top=y+"px";
+
+}
+
+};
+
+
+
+document.onmouseup=function(){
+
+arrastrando=false;
+
+};
+
+
+
+
+
+function fisica(){
+
+
+if(!arrastrando){
+
+
+x+=vx;
+
+y+=vy;
+
+
+
+// rozamiento
+
+vx*=0.94;
+
+vy*=0.94;
+
+
+
+// gravedad
+
+vy+=0.15;
+
+
+
+
+if(x<0 || x+80>innerWidth){
+
+vx*=-0.75;
+
+}
+
+
+
+if(y<0 || y+80>innerHeight){
+
+vy*=-0.75;
+
+}
+
+
+
+sol.style.left=x+"px";
+
+sol.style.top=y+"px";
+
+
+}
+
+
+
+requestAnimationFrame(fisica);
+
+
+}
+
+
+
+fisica();
+
+
+
+</script>
+
+
+</body>
+</html>
