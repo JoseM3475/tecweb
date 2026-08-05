@@ -1,24 +1,8 @@
-var valor;
+var clave;
 
 do {
-    valor = prompt("Ingrese un valor entre 0 y 999", "");
-    valor = parseInt(valor);
+    clave = prompt("Introduce la contraseña:");
 
-    document.write("El valor " + valor + " tiene ");
+} while (clave != "1234");
 
-    if (valor < 10) {
-        document.write("1 dígito");
-    }
-    else if (valor < 100) {
-        document.write("2 dígitos");
-    }
-    else if (valor < 1000) {
-        document.write("3 dígitos");
-    }
-    else {
-        document.write("más de 3 dígitos");
-    }
-
-    document.write("<br>");
-
-} while (valor != 0);
+document.write("Contraseña correcta");
