@@ -1,8 +1,9 @@
+
+
 var nota1, nota2, nota3;
 nota1=prompt('Ingrese 1ra. nota:','');
 nota2=prompt('Ingrese 2da. nota:','');
 nota3=prompt('Ingrese 3ra. nota:','');
-//Convertimos los 3 strings en enteros
 nota1 = parseInt(nota1);
 nota2 = parseInt(nota2);
 nota3 = parseInt(nota3);
