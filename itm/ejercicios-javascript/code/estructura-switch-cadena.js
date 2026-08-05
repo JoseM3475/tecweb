@@ -2,17 +2,17 @@ var col;
 
 col = prompt("Ingrese el color que quiera en el fondo de ventana (rojo, verde, azul)", "");
 
-switch (col) {   
+switch (col) {
     case "rojo":
-        document.body.style.backgroundColor = "#ff0000";
+        document.body.style.setProperty("background-color", "#ff0000", "important");
         break;
 
     case "verde":
-        document.body.style.backgroundColor = "#00ff00";
+        document.body.style.setProperty("background-color", "#00ff00", "important");
         break;
 
     case "azul":
-        document.body.style.backgroundColor = "#0000ff";
+        document.body.style.setProperty("background-color", "#0000ff", "important");
         break;
 
     default:
