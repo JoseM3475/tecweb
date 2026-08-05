@@ -1,9 +1,8 @@
-alert(valor);
 var valor;
 do {
     valor = prompt("Ingrese un valor entre 0 y 999", "");
     valor = parseInt(valor);
-
+    alert(valor);
     document.write("El valor " + valor + " tiene ");
 
     if (valor < 10) {
