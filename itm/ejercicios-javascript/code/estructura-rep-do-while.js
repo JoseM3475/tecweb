@@ -1,4 +1,3 @@
-alert("JS cargado");
 alert(valor);
 var valor;
 do {
