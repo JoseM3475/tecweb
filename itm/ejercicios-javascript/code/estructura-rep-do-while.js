@@ -3,7 +3,11 @@ var valor;
 do {
     valor = prompt("Ingrese un valor entre 0 y 999", "");
 
+    alert("Has escrito: " + valor);
+
     valor = parseInt(valor);
+
+    alert("Después de parseInt: " + valor);
 
     document.write("El valor " + valor + " tiene ");
 
