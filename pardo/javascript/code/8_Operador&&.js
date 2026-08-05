@@ -1,13 +1,13 @@
 var num1,num2,num3;
-num=prompt('Ingrese primer número:','');
+num1=prompt('Ingrese primer número:','');
 num2=prompt('Ingrese segundo número:','');
 num3=prompt('Ingrese tercer número:','');
-num1=parseInt(num1);
-num2=parseInt(num2);
-num3=parseInt(num3);
+num1=parseInt(num1, 10);
+num2=parseInt(num2, 10);
+num3=parseInt(num3, 10);
 if (num1>num2 && num1>num3)
 {
-    document.write('el mayor es el'+1);
+    document.write('el mayor es el '+num1);
 }
 else
 {
