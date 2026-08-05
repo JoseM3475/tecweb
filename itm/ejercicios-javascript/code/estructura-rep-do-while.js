@@ -1,8 +1,12 @@
-var clave;
+var numero;
+var suma = 0;
 
 do {
-    clave = prompt("Introduce la contraseña:");
+    numero = prompt("Introduce un número (0 para terminar):");
+    numero = parseInt(numero);
 
-} while (clave != "1234");
+    suma = suma + numero;
 
-document.write("Contraseña correcta");
+} while (numero != 0);
+
+document.write("La suma total es: " + suma);
