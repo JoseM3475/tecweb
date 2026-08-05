@@ -2,12 +2,7 @@ var valor;
 
 do {
     valor = prompt("Ingrese un valor entre 0 y 999", "");
-
-    alert("Has escrito: " + valor);
-
     valor = parseInt(valor);
-
-    alert("Después de parseInt: " + valor);
 
     document.write("El valor " + valor + " tiene ");
 
@@ -19,6 +14,9 @@ do {
     }
     else if (valor < 1000) {
         document.write("3 dígitos");
+    }
+    else {
+        document.write("más de 3 dígitos");
     }
 
     document.write("<br>");
