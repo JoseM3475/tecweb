@@ -1,4 +1,4 @@
-function ConvertimosCatellano(x)
+function ConvertimosCastellano(x)
 {
  if (x==1)
     return "uno";
