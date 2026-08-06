@@ -1,8 +1,4 @@
-<html>
-  <head>
-  </head>
-  <body>
-    <script language="javascript">
+
       function mostrarMensaje()
       {
         document.write("Cuidado<br>");
@@ -11,6 +7,4 @@
       mostrarMensaje();
       mostrarMensaje();
       mostrarMensaje();
-    </script>
-  </body>
-</html>
+    
