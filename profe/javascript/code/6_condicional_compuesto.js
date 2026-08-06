@@ -1,3 +1,10 @@
+/*
+Autor: Profe
+Nombre: 6_condicional_compuesto.js
+Fecha: 2026-08-05
+Proyecto: Ejercicios de JavaScript
+*/
+
 var num1, num2;
 num1 = prompt('Ingrese el primer número:','');
 num2 = prompt('Ingrese el segundo número:','');

@@ -1,3 +1,10 @@
+/*
+Autor: Profe
+Nombre: 7_condicionales_anidados.js
+Fecha: 2026-08-05
+Proyecto: Ejercicios de JavaScript
+*/
+
 var nota1, nota2, nota3, nota4, nota5;
 nota1=prompt('Ingrese 1ra. nota:','');
 nota2=prompt('Ingrese 2da. nota:','');
