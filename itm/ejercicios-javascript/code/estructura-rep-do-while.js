@@ -1,12 +1,9 @@
-var numero;
-var suma = 0;
+var x;
+x = 101;
 
-do {
-    numero = prompt("Introduce un número (0 para terminar):");
-    numero = parseInt(numero);
-
-    suma = suma + numero;
-
-} while (numero != 0);
-
-document.write("La suma total es: " + suma);
+do
+{
+    document.write(x);
+    x = x + 1;
+}
+while (x <= 100);
