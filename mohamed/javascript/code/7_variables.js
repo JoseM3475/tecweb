@@ -10,7 +10,7 @@ var pro;
 pro=(nota1+nota2+nota3/3);
 if (pro>=7)
 {
-  document.write(promocionado);       
+  document.write('promocionado');       
 }
 else
 {
