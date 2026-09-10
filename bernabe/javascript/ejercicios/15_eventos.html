@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arrays en Javascript</title>
 </head>
-<body>
+<body onload="focusOnForm()">
     <div><a href="../index.html">Volver a la página principal</a></div> 
     <script language="javascript" src="../code/15_eventos.js"></script>
 
@@ -84,5 +84,39 @@
         
         <input type="button" value="Enviar" onclick="contarLenguajes()">
     </form>
+
+    <hr>
+
+    <form action="#" name="form6">
+
+        <textarea name="curriculum" id="curriculum" rows="10" cols="50"></textarea>
+
+        <input type="button" onclick="validarCV()" value="Enviar">
+        
+    </form>
+
+    <hr>
+
+    <form action="#" name="form7">
+
+        <div>
+            <label for="name">Nombre:</label>
+            <input type="text" name="nombre" id="nombre" onFocus="vaciar(this)" onBlur="verificarEntrada(this)">
+        </div>
+        <div>
+            <label for="age">Edad:</label>
+            <input type="number" name="edad" id="edad" onFocus="vaciar(this)" onBlur="verificarEntrada(this)">
+        </div>
+        <input type="button" value="Confirmar">
+    </form>
+
+    <hr>
+
+    <form action="#" name="form8">
+        <a href="#" onmouseover="pintar('#ff0000')" onmouseout="pintar('#ffffff')">Pintar Rojo</a>
+        <a href="#" onmouseover="pintar()" onmouseout="pintar('#ffffff')">Pintar Verde</a>
+        <a href="#" onmouseover="pintar('#0000ff')" onmouseout="pintar('#ffffff')">Pintar Azul</a>
+    </form>
+
 </body>
 </html>

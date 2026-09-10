@@ -1,0 +1,16 @@
+var cadena=prompt('Ingrese una cadena:','');
+document.write('La cadena ingresada es:'+cadena);
+document.write('<br>');
+document.write('La cadena de caracteres son:'+cadena.length);
+document.write('El primer caracter es:'+cadena.charAt(0));
+document.write('Los priemros 3 caracteres son:'+cadena.substring(0.3));
+document.write('<br>');
+if (cadena.indexOf('hola')!=-1)
+document.write('Se ingresó la subcadena hola');
+else 
+document.write('No se inresó la subcadena hola');
+document.write('<br>');
+document.write('La cadena convertida en mayúsculas es:'+cadena.toUpperCase());
+document.write('<br>');
+document.write('La cadena convertida en minúsculas es:'+cadena.toLoerCase());       
+document.write('<br>');

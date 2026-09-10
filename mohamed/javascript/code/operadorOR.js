@@ -6,3 +6,7 @@ dia=parseInt(dia);
 mes=parseInt(mes);
 año=parseInt(año);
 if (mes==1 || mes==2 || mes==3);
+
+{
+  document.write('corresponde al primer trimestre del año.');  
+}

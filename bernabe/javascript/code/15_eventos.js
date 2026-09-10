@@ -58,3 +58,29 @@ function contarLenguajes(){
 
     alert('El usuario conoce ' + contador + ' lenguajes de programación.')
 }
+
+function validarCV(){
+    if (document.form6.curriculum.value.length > 100){
+        alert('Curriculum muy largo');
+    }else{
+        alert('Curriculum enviado');
+    }
+}
+
+function vaciar(control){
+    control.value = '';
+}
+
+function verificarEntrada(control){
+    if (control.value == ''){
+        alert('Debe ingresar datos');
+    }
+}
+
+function pintar(col){
+    document.bgColor = col;
+}
+
+function focusOnForm(){
+    document.form2.nombre.focus();
+}

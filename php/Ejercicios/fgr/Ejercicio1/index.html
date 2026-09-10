@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario en PHP</title>
+    <link rel="stylesheet" href="./estilos.css">
+     <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        form {
+            width: 350px;
+            margin: 50px auto;
+            padding: 25px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        form div {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="number"] {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="text"]:focus,
+        input[type="number"]:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <form action="/php/Ejercicios/Ejercicio1_fgr/procesar.php" method="POST">
+        <div>
+            <label for="nombre">Nombre:</label>
+            <input id="nombre" type="text" name="nombre">
+        </div>
+        <div>
+            <label for="ap1">Apellido1:</label>
+            <input id="ap1" type="text" name="ap1">
+        </div>
+        <div>
+            <label for="ap2">Apellido2:</label>
+            <input id="ap2" type="text" name="ap2">
+        </div>
+        <div>
+            <label for="edad">Edad:</label>
+            <input id="edad" type="number" name="edad">
+        </div>
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>

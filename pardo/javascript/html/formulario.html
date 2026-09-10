@@ -3,7 +3,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Formulario</title>
+    <title>Formulareio</title>
     <script type="text/javascript">
         var contador = 0;
 
@@ -58,9 +58,40 @@
             else if (document.form5.estudios[3].checked)
                 alert('Tienes estudios universitarios');
         }
+
+        function controlarCaracteres() {
+            if (document.form6.curriculum.value.length > 2000)
+                alert('curriculum muy largo');
+            else
+                alert('datos correctos');
+        }
+        function vaciar(control)
+{
+    control.value='';
+}
+function verificarEntrada(control)
+{
+    if (control.value=='')
+        alert('Debe ingresar datos');
+}
+function pintar(col)
+{
+    document.bgColor = col;
+}
+function activarPrimerControl()
+{
+    document.form1.nombre.focus();
+}
     </script>
+     <a href="pagina1.html" onMouseOver="pintar('#ff0000')" onMouseOut="pintar('#ffffff')">Rojo</a>
+<br>
+<a href="pagina1.html" onMouseOver="pintar('#00ff00')" onMouseOut="pintar('#ffffff')">Verde</a>
+<br>
+<a href="pagina1.html" onMouseOver="pintar('#0000ff')" onMouseOut="pintar('#ffffff')">Azul</a>
+<br>
 </head>
 <body>
+<body onLoad="activarPrimerControl()"></body>
     <form name="form0">
         <input type="button" onclick="incrementar()" value="Incrementar">
         <input type="button" onclick="decrementar()" value="Decrementar">
@@ -107,5 +138,21 @@
         <input type="radio" name="estudios" value="universitarios"> Universitarios<br>
         <input type="button" value="Mostrar" onclick="mostrarSeleccionado()">
     </form>
+
+    <form name="form6">
+        <textarea name="curriculum" rows="10" cols="50"></textarea>
+        <br>
+        <input type="button" value="Mostrar" onclick="controlarCaracteres()">
+    </form>
+    <form name="form7">
+Ingrese su nombre:
+<input type="text" name="nombre" onFocus="vaciar(this)" onBlur="verificarEntrada(this)"><br>
+Ingrese su edad:
+<input type="text" name="edad" onFocus="vaciar(this)" onBlur="verificarEntrada(this)"><br>
+<input type="button" value="Confirmar">
+
+
+</form>
+
 </body>
 </html>

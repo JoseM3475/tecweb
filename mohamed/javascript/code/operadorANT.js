@@ -8,7 +8,7 @@ num3=parseInt(num3);
 if (num1>num2 && num1>num3)
 
     {
-    document.write('el mayor es el '+num);
+    document.write('el mayor es el '+num1);
     }
  else
 {

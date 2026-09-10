@@ -33,4 +33,5 @@ return s;
 }
 
 
-document.write(formatearFecha(11,6,2006));
+var fec=formatearFecha(11,6,2006);
+document.write(fec);
