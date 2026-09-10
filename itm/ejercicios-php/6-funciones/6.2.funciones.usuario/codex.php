@@ -9,14 +9,14 @@ function saludar() {<br>
     echo 'Hola';<br>
 }
 <br>
-saludar();,¿cómo estás?
+saludar(); , ¿cómo estás?
 <br><br>
 
 function sumar(\$a, \$b) {<br>
     return \$a + \$b; <br>
 } <br>
 
-\$resultado = sumar(3, 5);
+\$resultado = sumar (3, 5);
 
 echo \$resultado;<br><br>
 En este caso, el resultado es 8. Hay varias formas de hacer esto, así que se puede ser flexible."
