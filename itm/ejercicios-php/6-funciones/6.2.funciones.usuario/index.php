@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="Función usuario" content="Ejercicio de funciones usuario php">
-        <title>Bucle: ARRAY ASOCIATIVO</title>
+        <title>Funciones usuario</title>
 </head>
 <body>
    <h1>Este es un ejercicio realizado mediante lenguaje php para mostrar funciones usuario en php</h1>
