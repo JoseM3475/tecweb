@@ -39,4 +39,6 @@ do {
     
 } while ($numero <= 10);
 
+echo "Están las instrucciones (Break) y (Continue) en caso de que queramos parar un proceso independientemente de si se cumple el objetivo<br>
+o de continuarlo aunque se haya llegado a verificar o falsear el mismo"
 ?>
