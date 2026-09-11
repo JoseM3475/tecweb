@@ -1,0 +1,509 @@
+/* =========================================
+   CONFIGURACIÓN
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #05070b;
+    color: white;
+    overflow: hidden;
+}
+
+
+/* =========================================
+   FONDO ANIMADO
+========================================= */
+
+.codigo-fondo {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    z-index: 0;
+    opacity: 0.35;
+}
+
+.codigo-fondo span {
+    position: absolute;
+    top: -100px;
+
+    color: #38bdf8;
+    font-family: Consolas, monospace;
+    font-size: 18px;
+
+    animation: caer linear infinite;
+}
+
+
+/* Posiciones y velocidades */
+
+.codigo-fondo span:nth-child(1) {
+    left: 5%;
+    animation-duration: 12s;
+}
+
+.codigo-fondo span:nth-child(2) {
+    left: 15%;
+    animation-duration: 16s;
+    animation-delay: 3s;
+}
+
+.codigo-fondo span:nth-child(3) {
+    left: 25%;
+    animation-duration: 13s;
+    animation-delay: 1s;
+}
+
+.codigo-fondo span:nth-child(4) {
+    left: 35%;
+    animation-duration: 18s;
+    animation-delay: 5s;
+}
+
+.codigo-fondo span:nth-child(5) {
+    left: 45%;
+    animation-duration: 14s;
+    animation-delay: 2s;
+}
+
+.codigo-fondo span:nth-child(6) {
+    left: 55%;
+    animation-duration: 17s;
+    animation-delay: 6s;
+}
+
+.codigo-fondo span:nth-child(7) {
+    left: 65%;
+    animation-duration: 15s;
+    animation-delay: 4s;
+}
+
+.codigo-fondo span:nth-child(8) {
+    left: 73%;
+    animation-duration: 19s;
+    animation-delay: 1s;
+}
+
+.codigo-fondo span:nth-child(9) {
+    left: 82%;
+    animation-duration: 13s;
+    animation-delay: 7s;
+}
+
+.codigo-fondo span:nth-child(10) {
+    left: 90%;
+    animation-duration: 16s;
+    animation-delay: 2s;
+}
+
+.codigo-fondo span:nth-child(11) {
+    left: 60%;
+    animation-duration: 20s;
+    animation-delay: 8s;
+}
+
+.codigo-fondo span:nth-child(12) {
+    left: 30%;
+    animation-duration: 15s;
+    animation-delay: 9s;
+}
+
+
+@keyframes caer {
+
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 0.8;
+    }
+
+    90% {
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: translateY(110vh);
+        opacity: 0;
+    }
+}
+
+
+/* =========================================
+   CONTENEDOR
+========================================= */
+
+.contenedor {
+    position: relative;
+    z-index: 2;
+
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px;
+}
+
+
+/* =========================================
+   PANEL
+========================================= */
+
+.panel {
+    width: 90%;
+    max-width: 900px;
+    min-height: 500px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    background: rgba(15, 23, 42, 0.88);
+
+    border: 1px solid rgba(56, 189, 248, 0.25);
+
+    border-radius: 22px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.6),
+        0 0 60px rgba(56, 189, 248, 0.08);
+
+    backdrop-filter: blur(15px);
+}
+
+/* =========================================
+   LADO IZQUIERDO
+========================================= */
+
+.panel-izquierdo {
+    padding: 45px;
+    display: flex;
+    align-items: center;
+}
+
+.contenido {
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+}
+
+
+/* =========================================
+   ETIQUETA
+========================================= */
+
+.etiqueta {
+    display: inline-block;
+
+    padding: 7px 14px;
+
+    border: 1px solid rgba(56, 189, 248, 0.3);
+
+    border-radius: 50px;
+
+    color: #38bdf8;
+
+    font-size: 0.7rem;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================================
+   TITULO
+========================================= */
+
+h1 {
+    font-size: 3.3rem;
+    line-height: 1.05;
+
+    margin-bottom: 20px;
+}
+
+h1 span {
+    color: #38bdf8;
+}
+
+
+/* =========================================
+   DESCRIPCIÓN
+========================================= */
+
+.descripcion {
+    color: #94a3b8;
+
+    font-size: 0.95rem;
+
+    line-height: 1.7;
+
+    margin-bottom: 35px;
+}
+
+
+/* =========================================
+   FORMULARIO
+========================================= */
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 7px;
+
+    color: #cbd5e1;
+
+    font-size: 0.85rem;
+}
+
+input {
+    width: 100%;
+
+    padding: 15px 16px;
+
+    margin-bottom: 20px;
+
+    border: 1px solid #334155;
+
+    border-radius: 10px;
+
+    outline: none;
+
+    background: rgba(8, 11, 18, 0.8);
+
+    color: white;
+
+    font-size: 0.95rem;
+
+    transition: 0.3s;
+}
+
+input:focus {
+    border-color: #38bdf8;
+
+    box-shadow:
+        0 0 0 3px rgba(56, 189, 248, 0.08);
+}
+
+input::placeholder {
+    color: #64748b;
+}
+
+
+/* =========================================
+   BOTÓN ENTRAR
+========================================= */
+
+form button {
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #38bdf8;
+
+    color: #05070b;
+
+    font-size: 0.95rem;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+form button:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 30px rgba(56, 189, 248, 0.25);
+}
+
+
+/* =========================================
+   REDES SOCIALES
+========================================= */
+
+.registro-social {
+    margin-top: 30px;
+
+    text-align: center;
+}
+
+.registro-social p {
+    color: #64748b;
+
+    font-size: 0.8rem;
+
+    margin-bottom: 12px;
+}
+
+.sociales {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 10px;
+}
+
+.sociales button {
+    width: 45px;
+    height: 45px;
+
+    border-radius: 10px;
+
+    border: 1px solid #334155;
+
+    background: rgba(8, 11, 18, 0.8);
+
+    color: white;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.sociales button:hover {
+    border-color: #38bdf8;
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================================
+   LADO DERECHO
+========================================= */
+
+.panel-derecho {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 40px;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(56, 189, 248, 0.15),
+            transparent 60%
+        ),
+
+        linear-gradient(
+            135deg,
+            #0b1019,
+            #080b12
+        );
+}
+
+.contenido-derecho {
+    max-width: 330px;
+}
+
+.icono {
+    display: block;
+
+    font-size: 3.5rem;
+
+    margin-bottom: 25px;
+}
+
+.contenido-derecho h2 {
+    font-size: 2rem;
+
+    line-height: 1.2;
+
+    margin-bottom: 20px;
+}
+
+.contenido-derecho p {
+    color: #94a3b8;
+
+    line-height: 1.7;
+
+    margin-bottom: 30px;
+}
+
+
+/* =========================================
+   BOTÓN CREAR CUENTA
+========================================= */
+
+.boton-crear {
+    padding: 13px 25px;
+
+    border: 1px solid #38bdf8;
+
+    border-radius: 10px;
+
+    background: transparent;
+
+    color: #38bdf8;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.boton-crear:hover {
+    background: #38bdf8;
+
+    color: #05070b;
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================================
+   MÓVIL
+========================================= */
+
+@media (max-width: 800px) {
+
+    body {
+        overflow: auto;
+    }
+
+    .contenedor {
+        padding: 20px;
+    }
+
+    .panel {
+        grid-template-columns: 1fr;
+    }
+
+    .panel-izquierdo {
+        padding: 40px 25px;
+    }
+
+    .panel-derecho {
+        padding: 40px 25px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+}
