@@ -1,9 +1,2396 @@
-<html>
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Temario completo de Desarrollo de Aplicaciones con Tecnología Web">
+
+    <title>
+        Desarrollo de Aplicaciones con Tecnología Web
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="style.css">
+
+</head>
+
 
 <body>
 
-    <h1>Pagina Web de Mohamed</h1>
-    <p><a href="./javascript/index.html">ejercicios de javascript</a></p>
+
+<!-- =================================================
+     CABECERA
+================================================= -->
+
+<header id="inicio">
+
+    <div class="hero">
+
+        <div class="hero-etiqueta">
+            DESARROLLO WEB · 2026
+        </div>
+
+
+        <h1>
+            
+            Desarrollo de
+            <span>Aplicaciones Web</span>
+
+        </h1>
+        <!-- ROBOT IA -->
+
+<div class="robot-ia" id="robotIA">
+
+    <div class="robot-antena">
+        <span></span>
+    </div>
+
+    <div class="robot-cabeza">
+
+        <div class="robot-ojo ojo-izquierdo"></div>
+
+        <div class="robot-ojo ojo-derecho"></div>
+
+        <div class="robot-boca">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+    </div>
+
+    <div class="robot-cuerpo">
+
+        <div class="robot-panel">
+            <span class="robot-luz"></span>
+            <span class="robot-luz"></span>
+            <span class="robot-luz"></span>
+        </div>
+
+    </div>
+
+    <div class="robot-brazo brazo-izquierdo"></div>
+
+    <div class="robot-brazo brazo-derecho"></div>
+
+</div>
+
+
+<div class="robot-mensaje" id="robotMensaje">
+
+    <strong>Hola 👋</strong>
+
+    <span>
+        Soy tu asistente IA.
+    </span>
+
+</div>
+
+        <p class="hero-descripcion">
+
+            Aprende a crear aplicaciones web desde cero,
+            combinando HTML5, CSS3 y JavaScript hasta
+            convertir tus conocimientos en proyectos reales.
+
+        </p>
+
+
+        <div class="hero-botones">
+
+            <a
+                href="#temario"
+                class="boton">
+
+                Empezar a estudiar →
+
+            </a>
+
+
+            <a
+                href="#html"
+                class="boton-secundario">
+
+                Explorar temario
+
+            </a>
+
+        </div>
+
+
+        <div class="hero-info">
+
+            <div>
+
+                <strong>03</strong>
+
+                <span>
+                    Tecnologías
+                </span>
+
+            </div>
+
+
+            <div>
+
+                <strong>04</strong>
+
+                <span>
+                    Bloques
+                </span>
+
+            </div>
+
+
+            <div>
+
+                <strong>∞</strong>
+
+                <span>
+                    Práctica
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<!-- =================================================
+     DASHBOARD DEL ALUMNO
+================================================= -->
+
+<section
+    id="dashboard"
+    class="dashboard">
+
+
+    <div class="dashboard-cabecera">
+
+        <div>
+
+            <span class="dashboard-etiqueta">
+                TU ESPACIO DE APRENDIZAJE
+            </span>
+
+
+            <h2>
+                Mi Dashboard
+            </h2>
+
+
+            <p>
+                Sigue tu progreso y continúa aprendiendo
+                desde donde lo dejaste.
+            </p>
+
+        </div>
+
+
+        <div class="nivel-alumno">
+
+            <span>
+                NIVEL
+            </span>
+
+
+            <strong id="nivelAlumno">
+                1
+            </strong>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =========================================
+         ESTADÍSTICAS
+    ========================================= -->
+
+    <div class="dashboard-estadisticas">
+
+
+        <!-- XP -->
+
+        <div class="estadistica">
+
+            <div class="estadistica-icono">
+                ⭐
+            </div>
+
+
+            <div>
+
+                <span>
+                    XP
+                </span>
+
+
+                <strong id="xpAlumno">
+                    0
+                </strong>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- LECCIONES -->
+
+        <div class="estadistica">
+
+            <div class="estadistica-icono">
+                📚
+            </div>
+
+
+            <div>
+
+                <span>
+                    LECCIONES
+                </span>
+
+
+                <strong id="leccionesCompletadas">
+                    0/5
+                </strong>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- RACHA -->
+
+        <div class="estadistica">
+
+            <div class="estadistica-icono">
+                🔥
+            </div>
+
+
+            <div>
+
+                <span>
+                    RACHA
+                </span>
+
+
+                <strong>
+
+                    <span id="rachaAlumno">
+                        0
+                    </span>
+
+                    días
+
+                </strong>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- PROGRESO -->
+
+        <div class="estadistica">
+
+            <div class="estadistica-icono">
+                📊
+            </div>
+
+
+            <div>
+
+                <span>
+                    PROGRESO
+                </span>
+
+
+                <strong id="progresoAlumno">
+                    0%
+                </strong>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =========================================
+         BARRA DE PROGRESO
+    ========================================= -->
+
+    <div class="dashboard-progreso">
+
+        <div class="progreso-info">
+
+            <span>
+                Progreso del curso
+            </span>
+
+
+            <strong id="progresoDashboard">
+                0%
+            </strong>
+
+        </div>
+
+
+        <div class="progreso-barra">
+
+            <div
+                id="barraDashboard"
+                class="progreso-barra-relleno">
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =========================================
+         CONTINUAR APRENDIENDO
+    ========================================= -->
+
+    <div class="continuar-aprendiendo">
+
+
+        <div class="continuar-icono">
+            🚀
+        </div>
+
+
+        <div class="continuar-contenido">
+
+            <span>
+                CONTINUAR APRENDIENDO
+            </span>
+
+
+            <h3 id="ultimaLeccion">
+                Todavía no has comenzado ninguna lección
+            </h3>
+
+
+            <p id="ultimaLeccionDescripcion">
+
+                Empieza tu primera lección para comenzar
+                a construir tu progreso.
+
+            </p>
+
+        </div>
+
+
+        <button
+            id="botonContinuar"
+            class="boton-continuar"
+            type="button">
+
+            Comenzar
+
+            <span>
+                →
+            </span>
+
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- =================================================
+     NAVEGACIÓN
+================================================= -->
+
+<nav>
+
+
+    <!-- =========================================
+         PROGRESO DEL CURSO
+    ========================================= -->
+
+
+    <!-- =========================================
+         FILTRO DEL TEMARIO
+    ========================================= -->
+
+    <section class="filtros-temario">
+
+
+        <div class="filtros-titulo">
+
+            <span>
+                EXPLORAR
+            </span>
+
+
+            <h2>
+                Temario del curso
+            </h2>
+
+        </div>
+
+
+        <div class="filtros-botones">
+
+
+            <button
+                class="filtro activo"
+                data-filtro="todos">
+
+                Todos
+
+            </button>
+
+
+            <button
+                class="filtro"
+                data-filtro="html">
+
+                HTML5
+
+            </button>
+
+
+            <button
+                class="filtro"
+                data-filtro="css">
+
+                CSS3
+
+            </button>
+
+
+            <button
+                class="filtro"
+                data-filtro="javascript">
+
+                JavaScript
+
+            </button>
+
+
+            <button
+                class="filtro"
+                data-filtro="desarrollo">
+
+                Desarrollo Web
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         PROGRESO DEL CURSO
+    ========================================= -->
+
+    <section class="progreso-curso">
+
+        <div class="progreso-header">
+
+            <div>
+
+                <span>
+                    PROGRESO DEL CURSO
+                </span>
+
+
+                <h2>
+                    Tu progreso
+                </h2>
+
+            </div>
+
+
+            <strong id="porcentaje">
+                0%
+            </strong>
+
+        </div>
+
+
+        <div class="barra-progreso">
+
+            <div
+                id="barra"
+                class="barra-progreso-relleno">
+            </div>
+
+        </div>
+
+
+        <p id="texto-progreso">
+            0 de 4 temas completados
+        </p>
+
+    </section>
+
+
+    <ul>
+
+
+        <li>
+
+            <a href="#temario">
+                Temario
+            </a>
+
+        </li>
+
+
+        <li>
+
+            <a href="#html">
+                HTML5
+            </a>
+
+        </li>
+
+
+        <li>
+
+            <a href="#css">
+                CSS3
+            </a>
+
+        </li>
+
+
+        <li>
+
+            <a href="#javascript">
+                JavaScript
+            </a>
+
+        </li>
+
+
+        <li>
+
+            <a href="#desarrollo">
+                Desarrollo Web
+            </a>
+
+        </li>
+
+
+        <li>
+
+            <a href="#proyecto">
+                Proyecto Final
+            </a>
+
+        </li>
+
+
+    </ul>
+
+</nav>
+<!-- =================================================
+     CONTENIDO PRINCIPAL
+================================================= -->
+
+<main id="temario">
+
+
+<!-- =================================================
+     TEMARIO COMPLETO
+================================================= -->
+
+<section>
+
+    <h2 class="titulo">
+        Temario completo
+    </h2>
+
+    <div class="linea"></div>
+
+    <p>
+
+        El curso se organiza en diferentes bloques
+        que permiten aprender progresivamente las
+        tecnologías fundamentales del desarrollo web.
+
+    </p>
+
+
+    <div class="tarjetas">
+
+
+        <div class="card">
+
+            <div class="icono">
+                🌐
+            </div>
+
+            <h3>
+                HTML5
+            </h3>
+
+            <p>
+
+                Estructura y organización del contenido
+                de una página web mediante HTML.
+
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icono">
+                🎨
+            </div>
+
+            <h3>
+                CSS3
+            </h3>
+
+            <p>
+
+                Diseño, presentación, responsive design,
+                Flexbox, Grid, animaciones y efectos.
+
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icono">
+                ⚡
+            </div>
+
+            <h3>
+                JavaScript
+            </h3>
+
+            <p>
+
+                Programación, eventos, funciones,
+                objetos, DOM e interacción.
+
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icono">
+                🚀
+            </div>
+
+            <h3>
+                Proyecto final
+            </h3>
+
+            <p>
+
+                Integración de HTML, CSS y JavaScript
+                para crear una aplicación web.
+
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =================================================
+     PARTE 1 HTML
+================================================= -->
+
+<section id="html">
+
+    <h2 class="titulo">
+        1. HTML5
+    </h2>
+
+    <div class="linea"></div>
+
+
+    <button
+        class="boton-estudiado"
+        data-tema="html">
+
+        <!-- =========================================
+             LECCIONES HTML5
+        ========================================= -->
+
+        <div class="lecciones-tema">
+
+            <div class="lecciones-cabecera">
+
+                <div>
+
+                    <span class="lecciones-etiqueta">
+                        RUTA DE APRENDIZAJE
+                    </span>
+
+                    <h3>
+                        Lecciones de HTML5
+                    </h3>
+
+                </div>
+
+
+                <span class="contador-lecciones">
+                    0 / 5
+                </span>
+
+            </div>
+
+
+            <div class="lista-lecciones">
+
+
+                <!-- LECCIÓN 01 -->
+
+                <article
+                    class="leccion"
+                    data-leccion="html-01">
+
+                    <div class="numero-leccion">
+                        01
+                    </div>
+
+
+                    <div class="contenido-leccion">
+
+                        <span>
+                            FUNDAMENTOS
+                        </span>
+
+                        <h4>
+                            Introducción a HTML5
+                        </h4>
+
+                        <p>
+
+                            Conoce qué es HTML y cuál es su función
+                            dentro del desarrollo de una página web.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="estado-leccion">
+
+                        <span class="estado">
+                            Pendiente
+                        </span>
+
+                        <button
+                            class="boton-leccion"
+                            data-leccion="html-01">
+
+                            Comenzar →
+
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- LECCIÓN 02 -->
+
+                <article
+                    class="leccion"
+                    data-leccion="html-02">
+
+                    <div class="numero-leccion">
+                        02
+                    </div>
+
+
+                    <div class="contenido-leccion">
+
+                        <span>
+                            ESTRUCTURA
+                        </span>
+
+                        <h4>
+                            Estructura de un documento HTML
+                        </h4>
+
+                        <p>
+
+                            Aprende cómo se organiza un documento
+                            HTML y cuáles son sus elementos principales.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="estado-leccion">
+
+                        <span class="estado">
+                            Pendiente
+                        </span>
+
+                        <button
+                            class="boton-leccion"
+                            data-leccion="html-02">
+
+                            Comenzar →
+
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- LECCIÓN 03 -->
+
+                <article
+                    class="leccion"
+                    data-leccion="html-03">
+
+                    <div class="numero-leccion">
+                        03
+                    </div>
+
+
+                    <div class="contenido-leccion">
+
+                        <span>
+                            ELEMENTOS
+                        </span>
+
+                        <h4>
+                            Etiquetas y atributos
+                        </h4>
+
+                        <p>
+
+                            Aprende a utilizar etiquetas HTML y sus
+                            atributos para estructurar el contenido.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="estado-leccion">
+
+                        <span class="estado">
+                            Pendiente
+                        </span>
+
+                        <button
+                            class="boton-leccion"
+                            data-leccion="html-03">
+
+                            Comenzar →
+
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- LECCIÓN 04 -->
+
+                <article
+                    class="leccion"
+                    data-leccion="html-04">
+
+                    <div class="numero-leccion">
+                        04
+                    </div>
+
+
+                    <div class="contenido-leccion">
+
+                        <span>
+                            CONTENIDO
+                        </span>
+
+                        <h4>
+                            Enlaces, imágenes y listas
+                        </h4>
+
+                        <p>
+
+                            Aprende a incorporar enlaces, imágenes
+                            y listas en tus documentos HTML.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="estado-leccion">
+
+                        <span class="estado">
+                            Pendiente
+                        </span>
+
+                        <button
+                            class="boton-leccion"
+                            data-leccion="html-04">
+
+                            Comenzar →
+
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- LECCIÓN 05 -->
+
+                <article
+                    class="leccion"
+                    data-leccion="html-05">
+
+                    <div class="numero-leccion">
+                        05
+                    </div>
+
+
+                    <div class="contenido-leccion">
+
+                        <span>
+                            SEMÁNTICA
+                        </span>
+
+                        <h4>
+                            HTML semántico y formularios
+                        </h4>
+
+                        <p>
+
+                            Conoce los principales elementos semánticos
+                            y la estructura básica de los formularios.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="estado-leccion">
+
+                        <span class="estado">
+                            Pendiente
+                        </span>
+
+                        <button
+                            class="boton-leccion"
+                            data-leccion="html-05">
+
+                            Comenzar →
+
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </div>
+
+        ✓ Marcar como estudiado
+
+    </button>
+
+
+    <div class="etiqueta-tema html-tag">
+        HTML5
+    </div>
+
+
+    <article>
+
+
+        <p>
+
+            HTML5 es el lenguaje utilizado para
+            estructurar el contenido de las páginas
+            y aplicaciones web.
+
+        </p>
+
+
+        <p>
+
+            El navegador interpreta las etiquetas
+            HTML y construye con ellas la estructura
+            que posteriormente será presentada al usuario.
+
+        </p>
+
+
+        <div class="nota">
+
+            <strong>
+                Concepto clave
+            </strong>
+
+            HTML se encarga principalmente de la
+            <strong>
+                estructura y significado del contenido
+            </strong>,
+            no de su apariencia visual.
+
+        </div>
+
+
+
+        <h2>
+            1.1. Estructura básica de HTML
+        </h2>
+
+
+        <p>
+
+            Un documento HTML comienza con una declaración
+            del tipo de documento y contiene normalmente
+            las secciones <code>head</code> y <code>body</code>.
+
+        </p>
+
+
+<pre><code>&lt;!DOCTYPE html&gt;
+
+&lt;html lang="es"&gt;
+
+&lt;head&gt;
+
+    &lt;meta charset="UTF-8"&gt;
+
+    &lt;title&gt;
+        Mi página web
+    &lt;/title&gt;
+
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;h1&gt;
+        Mi primera página
+    &lt;/h1&gt;
+
+    &lt;p&gt;
+        Hola mundo.
+    &lt;/p&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;</code></pre>
+
+
+
+        <h2>
+            1.2. Etiquetas HTML
+        </h2>
+
+
+        <p>
+
+            Las etiquetas permiten indicar qué representa
+            cada contenido dentro del documento.
+
+        </p>
+
+
+        <ul>
+
+            <li>
+                Encabezados.
+            </li>
+
+            <li>
+                Párrafos.
+            </li>
+
+            <li>
+                Enlaces.
+            </li>
+
+            <li>
+                Imágenes.
+            </li>
+
+            <li>
+                Listas.
+            </li>
+
+            <li>
+                Tablas.
+            </li>
+
+            <li>
+                Formularios.
+            </li>
+
+        </ul>
+
+
+
+        <h2>
+            1.3. Etiquetas semánticas
+        </h2>
+
+
+        <p>
+
+            Las etiquetas semánticas describen mejor
+            la función que desempeña cada parte del
+            documento.
+
+        </p>
+
+
+        <ul>
+
+            <li>
+                <code>&lt;header&gt;</code>
+            </li>
+
+            <li>
+                <code>&lt;nav&gt;</code>
+            </li>
+
+            <li>
+                <code>&lt;main&gt;</code>
+            </li>
+
+            <li>
+                <code>&lt;section&gt;</code>
+            </li>
+
+            <li>
+                <code>&lt;article&gt;</code>
+            </li>
+
+            <li>
+                <code>&lt;aside&gt;</code>
+            </li>
+
+            <li>
+                <code>&lt;footer&gt;</code>
+            </li>
+
+        </ul>
+
+
+
+        <h2>
+            1.4. Enlaces
+        </h2>
+
+
+        <p>
+
+            Los enlaces permiten conectar documentos
+            y recursos diferentes.
+
+        </p>
+
+
+<pre><code>&lt;a href="contacto.html"&gt;
+    Contacto
+&lt;/a&gt;</code></pre>
+
+
+
+        <h2>
+            1.5. Imágenes
+        </h2>
+
+
+<pre><code>&lt;img
+    src="imagen.jpg"
+    alt="Descripción de la imagen"&gt;</code></pre>
+
+
+
+        <div class="importante">
+
+            <strong>
+                Importante
+            </strong>
+
+            El atributo <code>alt</code> proporciona
+            una descripción alternativa de la imagen
+            y mejora la accesibilidad.
+
+        </div>
+
+
+
+        <h2>
+            1.6. Listas
+        </h2>
+
+
+        <p>
+
+            HTML permite crear listas ordenadas y no ordenadas.
+
+        </p>
+
+
+<pre><code>&lt;ul&gt;
+
+    &lt;li&gt;HTML&lt;/li&gt;
+    &lt;li&gt;CSS&lt;/li&gt;
+    &lt;li&gt;JavaScript&lt;/li&gt;
+
+&lt;/ul&gt;</code></pre>
+
+
+
+        <h2>
+            1.7. Tablas
+        </h2>
+
+
+        <p>
+
+            Las tablas permiten representar información
+            organizada en filas y columnas.
+
+        </p>
+
+
+
+        <h2>
+            1.8. Formularios
+        </h2>
+
+
+        <p>
+
+            Los formularios permiten recoger información
+            introducida por el usuario.
+
+        </p>
+
+
+<pre><code>&lt;form&gt;
+
+    &lt;label&gt;
+        Nombre:
+    &lt;/label&gt;
+
+    &lt;input
+        type="text"
+        name="nombre"&gt;
+
+    &lt;button type="submit"&gt;
+        Enviar
+    &lt;/button&gt;
+
+&lt;/form&gt;</code></pre>
+
+
+
+        <h2>
+            1.9. Multimedia
+        </h2>
+
+
+        <p>
+
+            HTML5 incorpora elementos para trabajar
+            directamente con contenido multimedia.
+
+        </p>
+
+
+        <ul>
+
+            <li>
+                Audio.
+            </li>
+
+            <li>
+                Vídeo.
+            </li>
+
+            <li>
+                Contenido incrustado.
+            </li>
+
+        </ul>
+
+
+
+        <h2>
+            1.10. SEO básico
+        </h2>
+
+
+        <p>
+
+            Una estructura HTML correctamente organizada
+            facilita que los motores de búsqueda interpreten
+            el contenido de una página.
+
+        </p>
+
+
+
+        <h2>
+            1.11. Accesibilidad
+        </h2>
+
+
+        <p>
+
+            La accesibilidad busca que el contenido web
+            pueda ser utilizado por el mayor número posible
+            de personas.
+
+        </p>
+
+
+    </article>
+
+</section>
+<!-- =================================================
+     PARTE 2 CSS
+================================================= -->
+
+<section id="css">
+
+    <h2 class="titulo">
+        2. CSS3
+    </h2>
+
+    <div class="linea"></div>
+
+    <button class="boton-estudiado" data-tema="css">
+        ✓ Marcar como estudiado
+    </button>
+
+    <div class="etiqueta-tema css-tag">
+        CSS3
+    </div>
+
+    <article>
+
+        <p>
+            CSS3 permite controlar la presentación visual
+            de los documentos HTML.
+        </p>
+
+        <p>
+            Mediante CSS podemos controlar colores,
+            tipografías, tamaños, espacios, distribución,
+            animaciones y adaptación a diferentes dispositivos.
+        </p>
+
+
+        <h2>
+            2.1. Selectores
+        </h2>
+
+        <p>
+            Los selectores permiten seleccionar los elementos
+            HTML a los que queremos aplicar estilos.
+        </p>
+
+<pre><code>p {
+
+    color: black;
+
+}
+
+h1 {
+
+    font-size: 40px;
+
+}</code></pre>
+
+
+        <h2>
+            2.2. Colores
+        </h2>
+
+        <p>
+            CSS permite utilizar diferentes formas para
+            definir colores.
+        </p>
+
+        <ul>
+
+            <li>
+                Nombres de colores.
+            </li>
+
+            <li>
+                HEX.
+            </li>
+
+            <li>
+                RGB.
+            </li>
+
+            <li>
+                RGBA.
+            </li>
+
+        </ul>
+
+
+        <h2>
+            2.3. Tipografías
+        </h2>
+
+        <p>
+            Las propiedades relacionadas con el texto permiten
+            controlar el tipo de letra, tamaño, grosor,
+            alineación y otros aspectos.
+        </p>
+
+
+        <h2>
+            2.4. Modelo de caja
+        </h2>
+
+        <p>
+            Cada elemento HTML puede entenderse como una caja
+            compuesta por contenido, padding, borde y margen.
+        </p>
+
+        <div class="nota">
+
+            <strong>
+                Recuerda
+            </strong>
+
+            El modelo de caja es fundamental para comprender
+            cómo se calcula el espacio ocupado por los elementos.
+
+        </div>
+
+
+        <h2>
+            2.5. Flexbox
+        </h2>
+
+        <p>
+            Flexbox permite distribuir y alinear elementos
+            dentro de un contenedor de forma flexible.
+        </p>
+
+<pre><code>.contenedor {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+}</code></pre>
+
+
+        <h2>
+            2.6. Grid Layout
+        </h2>
+
+        <p>
+            CSS Grid permite crear estructuras basadas
+            en filas y columnas.
+        </p>
+
+<pre><code>.galeria {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+
+}</code></pre>
+
+
+        <h2>
+            2.7. Responsive Design
+        </h2>
+
+        <p>
+            El diseño responsive permite adaptar una página
+            a ordenadores, tablets y teléfonos móviles.
+        </p>
+
+<pre><code>@media (max-width: 768px) {
+
+    .contenedor {
+
+        width: 100%;
+
+    }
+
+}</code></pre>
+
+
+        <h2>
+            2.8. Transiciones
+        </h2>
+
+<pre><code>button {
+
+    transition: .3s;
+
+}
+
+button:hover {
+
+    transform: translateY(-3px);
+
+}</code></pre>
+
+
+        <h2>
+            2.9. Animaciones
+        </h2>
+
+<pre><code>@keyframes flotar {
+
+    0% {
+
+        transform: translateY(0);
+
+    }
+
+    50% {
+
+        transform: translateY(-20px);
+
+    }
+
+    100% {
+
+        transform: translateY(0);
+
+    }
+
+}</code></pre>
+
+
+        <h2>
+            2.10. Variables CSS
+        </h2>
+
+<pre><code>:root {
+
+    --celeste: #38bdf8;
+
+    --negro: #080b12;
+
+}
+
+.titulo {
+
+    color: var(--celeste);
+
+}</code></pre>
+
+
+        <div class="ejemplo">
+
+            <strong>
+                Ejemplo práctico
+            </strong>
+
+            Las variables CSS permiten definir un color
+            una sola vez y reutilizarlo en diferentes partes
+            de una página.
+
+        </div>
+
+    </article>
+
+</section>
+
+
+
+<!-- =================================================
+     PARTE 3 JAVASCRIPT
+================================================= -->
+
+<section id="javascript">
+
+    <h2 class="titulo">
+        3. JavaScript
+    </h2>
+
+    <div class="linea"></div>
+
+    <button
+        class="boton-estudiado"
+        data-tema="javascript">
+
+        ✓ Marcar como estudiado
+
+    </button>
+
+    <div class="etiqueta-tema js-tag">
+        JAVASCRIPT
+    </div>
+
+    <article>
+
+        <p>
+
+            JavaScript es el lenguaje de programación que
+            permite añadir comportamiento e interacción
+            a las páginas web.
+
+        </p>
+
+
+        <div class="nota">
+
+            <strong>
+                Concepto clave
+            </strong>
+
+            HTML estructura la página,
+            CSS define su apariencia
+            y JavaScript permite programar
+            su comportamiento.
+
+        </div>
+
+
+        <h2>
+            3.1. Variables
+        </h2>
+
+<pre><code>let nombre = "Carlos";
+
+let edad = 25;
+
+const pais = "España";</code></pre>
+        <h2>
+            3.1. Variables
+        </h2>
+
+<pre><code>let nombre = "Carlos";
+
+let edad = 25;
+
+const pais = "España";</code></pre>
+
+
+        <h2>
+            3.2. Tipos de datos
+        </h2>
+
+        <ul>
+
+            <li>
+                String.
+            </li>
+
+            <li>
+                Number.
+            </li>
+
+            <li>
+                Boolean.
+            </li>
+
+            <li>
+                Array.
+            </li>
+
+            <li>
+                Object.
+            </li>
+
+        </ul>
+
+
+        <h2>
+            3.3. Operadores
+        </h2>
+
+        <p>
+
+            Los operadores permiten realizar operaciones
+            matemáticas, comparaciones y operaciones lógicas.
+
+        </p>
+
+
+        <h2>
+            3.4. Condicionales
+        </h2>
+
+<pre><code>if (edad >= 18) {
+
+    console.log("Mayor de edad");
+
+} else {
+
+    console.log("Menor de edad");
+
+}</code></pre>
+
+
+        <h2>
+            3.5. Bucles
+        </h2>
+
+<pre><code>for (let i = 0; i < 5; i++) {
+
+    console.log(i);
+
+}</code></pre>
+
+
+        <h2>
+            3.6. Funciones
+        </h2>
+
+<pre><code>function saludar(nombre) {
+
+    return "Hola " + nombre;
+
+}
+
+console.log(
+    saludar("Carlos")
+);</code></pre>
+
+
+        <h2>
+            3.7. Arrays
+        </h2>
+
+<pre><code>let cursos = [
+
+    "HTML",
+    "CSS",
+    "JavaScript"
+
+];
+
+console.log(cursos[0]);</code></pre>
+
+
+        <h2>
+            3.8. Objetos
+        </h2>
+
+<pre><code>const alumno = {
+
+    nombre: "Carlos",
+
+    edad: 22,
+
+    curso: "Desarrollo Web"
+
+};</code></pre>
+
+
+        <h2>
+            3.9. Eventos
+        </h2>
+
+        <p>
+
+            Los eventos permiten ejecutar código cuando
+            ocurre una acción determinada, como hacer clic
+            en un botón o enviar un formulario.
+
+        </p>
+
+<pre><code>document
+    .getElementById("boton")
+    .addEventListener("click", function() {
+
+        alert("Has pulsado el botón");
+
+    });</code></pre>
+
+
+        <h2>
+            3.10. DOM
+        </h2>
+
+        <p>
+
+            El DOM representa el documento HTML como una
+            estructura de objetos que JavaScript puede modificar.
+
+        </p>
+
+<pre><code>const titulo =
+    document.getElementById("titulo");
+
+titulo.textContent =
+    "Nuevo título";</code></pre>
+
+
+        <h2>
+            3.11. Formularios
+        </h2>
+
+        <p>
+
+            JavaScript puede obtener los datos introducidos
+            por el usuario, validarlos y responder ante
+            el envío del formulario.
+
+        </p>
+
+
+        <h2>
+            3.12. Temporizadores
+        </h2>
+
+<pre><code>setTimeout(function() {
+
+    console.log("Han pasado 2 segundos");
+
+}, 2000);</code></pre>
+
+
+        <h2>
+            3.13. Programación dinámica
+        </h2>
+
+        <p>
+
+            La combinación de JavaScript y DOM permite
+            modificar dinámicamente el contenido de una
+            página sin necesidad de recargarla completamente.
+
+        </p>
+
+    </article>
+
+</section>
+
+
+
+<!-- =================================================
+     PARTE 4 DESARROLLO WEB
+================================================= -->
+
+<section id="desarrollo">
+
+    <h2 class="titulo">
+        4. Desarrollo Web
+    </h2>
+
+    <div class="linea"></div>
+
+    <button
+        class="boton-estudiado"
+        data-tema="desarrollo">
+
+        ✓ Marcar como estudiado
+
+    </button>
+<!-- =================================================
+     PARTE 4 DESARROLLO WEB
+================================================= -->
+
+<section id="desarrollo">
+
+    <h2 class="titulo">
+        4. Desarrollo Web
+    </h2>
+
+    <div class="linea"></div>
+
+    <button
+        class="boton-estudiado"
+        data-tema="desarrollo">
+
+        ✓ Marcar como estudiado
+
+    </button>
+
+    <div class="etiqueta-tema web-tag">
+        DESARROLLO WEB
+    </div>
+
+
+    <article>
+
+        <p>
+
+            Una aplicación web completa no está formada
+            únicamente por HTML, CSS y JavaScript.
+            También puede necesitar un servidor,
+            una base de datos y diferentes servicios.
+
+        </p>
+
+
+        <h2>
+            4.1. Modelo cliente-servidor
+        </h2>
+
+        <p>
+
+            El cliente realiza una petición al servidor.
+            El servidor procesa la solicitud y devuelve
+            una respuesta.
+
+        </p>
+
+
+        <h2>
+            4.2. HTTP y HTTPS
+        </h2>
+
+        <p>
+
+            HTTP permite la comunicación entre clientes
+            y servidores web. HTTPS incorpora cifrado
+            para proteger dicha comunicación.
+
+        </p>
+
+
+        <h2>
+            4.3. Bases de datos
+        </h2>
+
+        <p>
+
+            Las bases de datos permiten almacenar y
+            gestionar información de manera estructurada.
+
+        </p>
+
+
+        <h2>
+            4.4. SQL
+        </h2>
+
+<pre><code>SELECT nombre
+FROM usuarios
+WHERE edad >= 18;</code></pre>
+
+
+        <h2>
+            4.5. Operaciones CRUD
+        </h2>
+
+        <ul>
+
+            <li>
+                Create — Crear.
+            </li>
+
+            <li>
+                Read — Leer.
+            </li>
+
+            <li>
+                Update — Actualizar.
+            </li>
+
+            <li>
+                Delete — Eliminar.
+            </li>
+
+        </ul>
+
+
+        <h2>
+            4.6. APIs
+        </h2>
+
+        <p>
+
+            Una API permite que diferentes aplicaciones
+            puedan comunicarse entre ellas.
+
+        </p>
+
+
+        <h2>
+            4.7. Despliegue
+        </h2>
+
+        <p>
+
+            El despliegue consiste en preparar y publicar
+            una aplicación para que pueda ser utilizada
+            en un entorno real.
+
+        </p>
+
+
+        <h2>
+            4.8. Pruebas
+        </h2>
+
+        <ul>
+
+            <li>
+                Pruebas funcionales.
+            </li>
+
+            <li>
+                Pruebas de navegación.
+            </li>
+
+            <li>
+                Pruebas responsive.
+            </li>
+
+            <li>
+                Pruebas de formularios.
+            </li>
+
+            <li>
+                Pruebas de compatibilidad.
+            </li>
+
+        </ul>
+
+
+        <h2>
+            4.9. Documentación
+        </h2>
+
+        <p>
+
+            Documentar correctamente un proyecto facilita
+            su mantenimiento y permite que otros desarrolladores
+            comprendan su funcionamiento.
+
+        </p>
+
+    </article>
+
+</section>
+
+
+
+<!-- =================================================
+     PROYECTO FINAL
+================================================= -->
+
+<section id="proyecto">
+
+    <h2 class="titulo">
+        5. Proyecto Final
+    </h2>
+
+    <div class="linea"></div>
+
+
+    <article>
+
+        <p>
+
+            El objetivo final es integrar los conocimientos
+            adquiridos durante el curso para construir
+            una aplicación web completa.
+
+        </p>
+
+
+        <div class="tarjetas">
+
+
+            <div class="card">
+
+                <div class="icono">
+                    📄
+                </div>
+
+                <h3>
+                    HTML
+                </h3>
+
+                <p>
+
+                    Crear la estructura y organizar
+                    correctamente el contenido.
+
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="icono">
+                    🎨
+                </div>
+
+                <h3>
+                    CSS
+                </h3>
+
+                <p>
+
+                    Diseñar la interfaz, hacerla responsive
+                    y añadir efectos visuales.
+
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="icono">
+                    ⚙️
+                </div>
+
+                <h3>
+                    JavaScript
+                </h3>
+
+                <p>
+
+                    Añadir interacción, eventos,
+                    validaciones y comportamiento dinámico.
+
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="icono">
+                    🚀
+                </div>
+
+                <h3>
+                    Publicación
+                </h3>
+
+                <p>
+
+                    Preparar el proyecto y publicarlo
+                    en un entorno web.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="importante">
+
+            <strong>
+                Objetivo final
+            </strong>
+
+            Ser capaz de pasar de una idea a una aplicación
+            web funcional utilizando las tecnologías aprendidas
+            durante la formación.
+
+        </div>
+
+    </article>
+
+</section>
+<!-- =================================================
+     RESUMEN
+================================================= -->
+
+<section>
+
+    <h2 class="titulo">
+        Resumen
+    </h2>
+
+    <div class="linea"></div>
+
+
+    <article>
+
+        <div class="tabla">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>
+                            Tecnología
+                        </th>
+
+                        <th>
+                            Función
+                        </th>
+
+                        <th>
+                            Principales contenidos
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody>
+
+                    <tr>
+
+                        <td>
+                            HTML5
+                        </td>
+
+                        <td>
+                            Estructura
+                        </td>
+
+                        <td>
+                            Etiquetas, formularios,
+                            tablas, multimedia y semántica.
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            CSS3
+                        </td>
+
+                        <td>
+                            Diseño
+                        </td>
+
+                        <td>
+                            Selectores, Flexbox, Grid,
+                            responsive, animaciones.
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            JavaScript
+                        </td>
+
+                        <td>
+                            Programación
+                        </td>
+
+                        <td>
+                            Variables, funciones, objetos,
+                            eventos, DOM y temporizadores.
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            Desarrollo Web
+                        </td>
+
+                        <td>
+                            Integración
+                        </td>
+
+                        <td>
+                            Servidor, bases de datos,
+                            APIs, pruebas y despliegue.
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </article>
+
+</section>
+
+
+</main>
+
+
+
+<footer>
+
+    <p>
+
+        <strong>
+            Desarrollo de Aplicaciones con Tecnología Web
+        </strong>
+
+    </p>
+
+
+    <p>
+        HTML5 · CSS3 · JavaScript · Desarrollo Web
+    </p>
+
+</footer>
+
+
+
+<script src="script.js"></script>
+
 
 </body>
 

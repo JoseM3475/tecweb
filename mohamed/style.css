@@ -1,0 +1,3147 @@
+/* =========================================
+   VARIABLES
+========================================= */
+
+:root {
+
+    --negro: #080b12;
+    --negro-suave: #111827;
+
+    --celeste: #38bdf8;
+    --celeste-suave: #e0f2fe;
+
+    --cobre: #c47a44;
+    --cobre-claro: #f1c7a5;
+
+    --blanco: #ffffff;
+    --gris: #64748b;
+    --gris-claro: #f1f5f9;
+
+    --borde: #e2e8f0;
+
+}
+
+
+/* =========================================
+   RESET
+========================================= */
+
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+
+body {
+
+    font-family: "Segoe UI", Arial, sans-serif;
+
+    background: #f6f8fb;
+
+    color: #1e293b;
+
+    line-height: 1.7;
+
+}
+
+
+/* =========================================
+   HEADER / HERO
+========================================= */
+
+header {
+
+    min-height: 620px;
+
+    display: flex;
+
+    align-items: center;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+
+        radial-gradient(
+            circle at 80% 20%,
+            rgba(56,189,248,.18),
+            transparent 28%
+        ),
+
+        radial-gradient(
+            circle at 15% 85%,
+            rgba(196,122,68,.14),
+            transparent 30%
+        ),
+
+        linear-gradient(
+            135deg,
+            #05070b,
+            #0b1019 55%,
+            #080b12
+        );
+
+    color: white;
+
+    padding: 90px 20px;
+
+}
+
+
+/* Luz decorativa */
+
+header::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+
+    height: 500px;
+
+    border-radius: 50%;
+
+    border: 1px solid
+        rgba(56,189,248,.08);
+
+    right: -180px;
+
+    top: -180px;
+
+}
+
+
+header::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 300px;
+
+    height: 300px;
+
+    border-radius: 50%;
+
+    border: 1px solid
+        rgba(196,122,68,.08);
+
+    left: -120px;
+
+    bottom: -120px;
+
+}
+
+
+.hero {
+
+    width: 92%;
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+
+.hero-etiqueta {
+
+    display: inline-block;
+
+    padding: 8px 14px;
+
+    border: 1px solid
+        rgba(56,189,248,.3);
+
+    border-radius: 50px;
+
+    color: var(--celeste);
+
+    background:
+        rgba(56,189,248,.05);
+
+    font-size: .75rem;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 25px;
+
+}
+
+
+.hero h1 {
+
+    font-size:
+        clamp(3rem, 7vw, 6.5rem);
+
+    line-height: .95;
+
+    max-width: 1000px;
+
+    margin: 0 0 30px;
+
+    letter-spacing: -3px;
+
+}
+
+
+.hero h1 span {
+
+    display: block;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            var(--celeste),
+            #b8e9ff 45%,
+            var(--cobre)
+        );
+
+    -webkit-background-clip: text;
+
+    background-clip: text;
+
+    color: transparent;
+
+}
+
+
+.hero-descripcion {
+
+    max-width: 720px;
+
+    color: #94a3b8;
+
+    font-size: 1.15rem;
+
+    line-height: 1.8;
+
+    margin-bottom: 35px;
+
+}
+
+
+.hero-botones {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+
+}
+
+
+.boton {
+
+    display: inline-block;
+
+    padding: 14px 24px;
+
+    border-radius: 10px;
+
+    background: var(--celeste);
+
+    color: var(--negro);
+
+    text-decoration: none;
+
+    font-weight: 700;
+
+    transition: .3s;
+
+}
+
+
+.boton:hover {
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 10px 30px
+        rgba(56,189,248,.2);
+
+}
+
+
+.boton-secundario {
+
+    display: inline-block;
+
+    padding: 13px 24px;
+
+    border: 1px solid #334155;
+
+    border-radius: 10px;
+
+    color: #cbd5e1;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    transition: .3s;
+
+}
+
+
+.boton-secundario:hover {
+
+    border-color: var(--cobre);
+
+    color: var(--cobre-claro);
+
+    transform: translateY(-3px);
+
+}
+
+
+/* =========================================
+   INFORMACIÓN DEL HERO
+========================================= */
+
+.hero-info {
+
+    display: flex;
+
+    gap: 50px;
+
+    margin-top: 65px;
+
+    padding-top: 25px;
+
+    border-top: 1px solid
+        rgba(255,255,255,.08);
+
+    max-width: 600px;
+
+}
+
+
+.hero-info div {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+.hero-info strong {
+
+    font-size: 1.8rem;
+
+    color: white;
+
+}
+
+
+.hero-info span {
+
+    color: #64748b;
+
+    font-size: .8rem;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+}
+
+/* =========================================
+   NAVEGACIÓN
+========================================= */
+
+nav {
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+    background: rgba(8,11,18,.95);
+
+    backdrop-filter: blur(10px);
+
+    border-bottom: 1px solid #1e293b;
+
+}
+
+
+nav ul {
+
+    max-width: 1200px;
+
+    width: 92%;
+
+    margin: auto;
+
+    display: flex;
+
+    list-style: none;
+
+    overflow-x: auto;
+
+}
+
+
+nav a {
+
+    display: block;
+
+    padding: 18px 20px;
+
+    color: #cbd5e1;
+
+    text-decoration: none;
+
+    white-space: nowrap;
+
+    transition: .3s;
+
+}
+
+
+nav a:hover {
+
+    color: var(--celeste);
+
+}
+
+
+/* =========================================
+   CONTENIDO
+========================================= */
+
+main {
+
+    max-width: 1200px;
+
+    width: 92%;
+
+    margin: 60px auto;
+
+}
+
+
+section {
+
+    margin-bottom: 80px;
+
+    scroll-margin-top: 90px;
+
+}
+
+
+.titulo {
+
+    font-size: clamp(2rem, 4vw, 3rem);
+
+    color: var(--negro);
+
+    margin-bottom: 10px;
+
+}
+
+
+.linea {
+
+    width: 70px;
+
+    height: 4px;
+
+    background: var(--cobre);
+
+    margin-bottom: 30px;
+
+    border-radius: 10px;
+
+}
+
+
+/* =========================================
+   TARJETAS
+========================================= */
+
+.tarjetas {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(250px, 1fr));
+
+    gap: 20px;
+
+    margin: 30px 0;
+
+}
+
+
+.card {
+
+    background: white;
+
+    padding: 28px;
+
+    border-radius: 16px;
+
+    border: 1px solid var(--borde);
+
+    transition: .3s;
+
+}
+
+
+.card:hover {
+
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 15px 40px rgba(15,23,42,.09);
+
+}
+
+
+.card .icono {
+
+    font-size: 2rem;
+
+    margin-bottom: 15px;
+
+}
+
+
+.card h3 {
+
+    margin-bottom: 10px;
+
+    color: var(--negro);
+
+}
+
+
+/* =========================================
+   TEMARIO
+========================================= */
+
+article {
+
+    background: white;
+
+    padding: 35px;
+
+    margin-bottom: 30px;
+
+    border-radius: 18px;
+
+    border: 1px solid var(--borde);
+
+}
+
+
+article h2 {
+
+    color: var(--negro);
+
+    margin: 35px 0 15px;
+
+    padding-bottom: 8px;
+
+    border-bottom: 2px solid var(--celeste-suave);
+
+}
+
+
+article h3 {
+
+    color: #334155;
+
+    margin: 25px 0 10px;
+
+}
+
+
+article h4 {
+
+    color: var(--cobre);
+
+    margin: 20px 0 8px;
+
+}
+
+
+article p {
+
+    margin-bottom: 15px;
+
+}
+
+
+article ul {
+
+    margin: 15px 0 20px 25px;
+
+}
+
+
+article li {
+
+    margin-bottom: 7px;
+
+}
+
+
+/* =========================================
+   BLOQUES DIDÁCTICOS
+========================================= */
+
+.nota {
+
+    background: var(--celeste-suave);
+
+    border-left: 5px solid var(--celeste);
+
+    padding: 20px;
+
+    border-radius: 10px;
+
+    margin: 25px 0;
+
+}
+
+
+.ejemplo {
+
+    background: #f0fdf4;
+
+    border-left: 5px solid #22c55e;
+
+    padding: 20px;
+
+    border-radius: 10px;
+
+    margin: 25px 0;
+
+}
+
+
+.importante {
+
+    background: #fff7ed;
+
+    border-left: 5px solid var(--cobre);
+
+    padding: 20px;
+
+    border-radius: 10px;
+
+    margin: 25px 0;
+
+}
+
+
+/* =========================================
+   CÓDIGO
+========================================= */
+
+pre {
+
+    background: var(--negro);
+
+    color: #e2e8f0;
+
+    padding: 22px;
+
+    border-radius: 12px;
+
+    overflow-x: auto;
+
+    margin: 20px 0;
+
+}
+
+
+code {
+
+    font-family: Consolas, monospace;
+
+}
+
+
+/* =========================================
+   TABLA
+========================================= */
+
+.tabla {
+
+    overflow-x: auto;
+
+}
+
+
+table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+    background: white;
+
+}
+
+
+th,
+td {
+
+    padding: 15px;
+
+    border-bottom: 1px solid var(--borde);
+
+    text-align: left;
+
+}
+
+
+th {
+
+    background: var(--negro);
+
+    color: white;
+
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+
+    background: var(--negro);
+
+    color: #94a3b8;
+
+    text-align: center;
+
+    padding: 50px 20px;
+
+}
+
+
+footer strong {
+
+    color: white;
+
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media(max-width: 700px) {
+
+/* =========================================
+   PROGRESO DEL CURSO
+========================================= */
+
+.progreso-curso {
+
+    max-width: 1200px;
+
+    width: 92%;
+
+    margin: 40px auto;
+
+    padding: 30px;
+
+    background: white;
+
+    border: 1px solid var(--borde);
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 10px 30px rgba(15, 23, 42, .05);
+
+}
+
+
+.progreso-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.progreso-header span {
+
+    color: var(--cobre);
+
+    font-size: .8rem;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+}
+
+
+.progreso-header h2 {
+
+    margin-top: 5px;
+
+    color: var(--negro);
+
+}
+
+
+#porcentaje {
+
+    font-size: 2rem;
+
+    color: var(--celeste);
+
+}
+
+
+.barra-progreso {
+
+    width: 100%;
+
+    height: 14px;
+
+    background: #e2e8f0;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+}
+
+
+.barra-progreso-relleno {
+
+    width: 0%;
+
+    height: 100%;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            var(--celeste),
+            var(--cobre)
+        );
+
+    border-radius: 20px;
+
+    transition: width .5s ease;
+
+}
+
+
+#texto-progreso {
+
+    margin-top: 12px;
+
+    color: var(--gris);
+
+    font-size: .9rem;
+
+}
+
+
+/* =========================================
+   BOTÓN ESTUDIADO
+========================================= */
+
+.boton-estudiado {
+
+    border: 1px solid var(--celeste);
+
+    background: white;
+
+    color: #0284c7;
+
+    padding: 10px 18px;
+
+    border-radius: 10px;
+
+    font-family: inherit;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+    margin-bottom: 20px;
+
+}
+
+
+.boton-estudiado:hover {
+
+    background: var(--celeste);
+
+    color: var(--negro);
+
+    transform: translateY(-2px);
+
+}
+
+
+.boton-estudiado.completado {
+
+    background: #dcfce7;
+
+    border-color: #22c55e;
+
+    color: #15803d;
+
+}
+
+
+.boton-estudiado.completado:hover {
+
+    background: #bbf7d0;
+
+}
+    article {
+
+        padding: 22px;
+
+    }
+
+    nav a {
+
+        padding: 15px;
+
+    }
+
+}
+@media (max-width: 700px) {
+
+    header {
+
+        min-height: 600px;
+
+        padding: 70px 20px;
+
+    }
+
+
+    .hero h1 {
+
+        font-size: 3.3rem;
+
+        letter-spacing: -2px;
+
+    }
+
+
+    .hero-descripcion {
+
+        font-size: 1rem;
+
+    }
+
+
+    .hero-info {
+
+        gap: 25px;
+
+        margin-top: 45px;
+
+    }
+
+
+    .hero-info strong {
+
+        font-size: 1.4rem;
+
+    }
+
+
+    .hero-info span {
+
+        font-size: .7rem;
+
+    }
+
+
+    .boton,
+    .boton-secundario {
+
+        width: 100%;
+
+        text-align: center;
+
+    }
+
+}
+/* =========================================
+   ETIQUETAS DE LOS TEMAS
+========================================= */
+
+.etiqueta-tema {
+
+    display: inline-block;
+
+    padding: 6px 12px;
+
+    border-radius: 50px;
+
+    font-size: .72rem;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+
+    margin-bottom: 15px;
+
+}
+
+
+/* HTML */
+
+.html-tag {
+
+    background: #e0f2fe;
+
+    color: #0284c7;
+
+}
+
+
+/* CSS */
+
+.css-tag {
+
+    background: #fef3c7;
+
+    color: #b45309;
+
+}
+
+
+/* JavaScript */
+
+.js-tag {
+
+    background: #fef9c3;
+
+    color: #854d0e;
+
+}
+
+
+/* Desarrollo Web */
+
+.web-tag {
+
+    background: #f3e8ff;
+
+    color: #7e22ce;
+
+}
+/* =========================================
+   FILTROS DEL TEMARIO
+========================================= */
+
+.filtros-temario {
+
+    max-width: 1200px;
+    width: 92%;
+
+    margin: 70px auto 25px;
+
+    padding: 28px 32px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 30px;
+
+    flex-wrap: wrap;
+
+    background: #ffffff;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 10px 30px
+        rgba(15, 23, 42, .06);
+
+}
+
+
+/* TÍTULO */
+
+.filtros-titulo span {
+
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: var(--cobre);
+
+    font-size: .7rem;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+}
+
+
+.filtros-titulo h2 {
+
+    margin: 0;
+
+    color: #0f172a;
+
+    font-size: 1.8rem;
+
+    line-height: 1.2;
+
+}
+
+
+/* BOTONES */
+
+.filtros-botones {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    flex-wrap: wrap;
+
+}
+
+
+.filtro {
+
+    border: 1px solid #cbd5e1;
+
+    background: #f8fafc;
+
+    color: #475569;
+
+    padding: 10px 15px;
+
+    border-radius: 9px;
+
+    font-family: inherit;
+
+    font-size: .85rem;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        .25s ease;
+
+}
+
+
+.filtro:hover {
+
+    border-color:
+        var(--celeste);
+
+    background:
+        #f0f9ff;
+
+    color:
+        #0284c7;
+
+    transform:
+        translateY(-2px);
+
+}
+
+
+/* BOTÓN ACTIVO */
+
+.filtro.activo {
+
+    background:
+        #0f172a;
+
+    border-color:
+        #0f172a;
+
+    color:
+        #ffffff;
+
+}
+
+
+.filtro.activo:hover {
+
+    background:
+        #1e293b;
+
+    border-color:
+        #1e293b;
+
+    color:
+        #ffffff;
+
+}
+
+
+/* =========================================
+   PROGRESO DEL CURSO
+========================================= */
+
+.progreso-curso {
+
+    max-width: 1200px;
+
+    width: 92%;
+
+    margin: 0 auto 50px;
+
+    padding: 25px 30px;
+
+    background:
+        #0f172a;
+
+    border-radius: 18px;
+
+    color: white;
+
+    box-shadow:
+        0 15px 35px
+        rgba(15, 23, 42, .12);
+
+}
+
+
+.progreso-curso h2 {
+
+    margin: 0 0 5px;
+
+    color: white;
+
+    font-size: 1.5rem;
+
+}
+
+
+.progreso-curso p {
+
+    margin: 0 0 18px;
+
+    color: #94a3b8;
+
+}
+
+
+/* PORCENTAJE */
+
+.progreso-curso .porcentaje {
+
+    font-size: 2rem;
+
+    font-weight: 800;
+
+    color: var(--celeste);
+
+}
+
+
+/* BARRA */
+
+.barra-progreso {
+
+    width: 100%;
+
+    height: 10px;
+
+    margin-top: 15px;
+
+    background:
+        #1e293b;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+}
+
+
+.barra-progreso-relleno {
+
+    width: 0%;
+
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--celeste),
+            var(--cobre)
+        );
+
+    border-radius: 20px;
+
+    transition:
+        width .5s ease;
+
+}
+
+
+#texto-progreso {
+
+    margin-top: 10px;
+
+    color: #94a3b8;
+
+    font-size: .85rem;
+
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 800px) {
+
+    .filtros-temario {
+
+        align-items:
+            flex-start;
+
+        padding:
+            24px;
+
+    }
+
+
+    .filtros-botones {
+
+        width: 100%;
+
+    }
+
+
+    .filtro {
+
+        flex: 1;
+
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .filtros-temario {
+
+        width: 90%;
+
+        padding:
+            20px;
+
+    }
+
+
+    .filtros-botones {
+
+        display: grid;
+
+        grid-template-columns:
+            1fr 1fr;
+
+        width: 100%;
+
+    }
+
+
+    .filtro {
+
+        width: 100%;
+
+    }
+
+
+    .progreso-curso {
+
+        width: 90%;
+
+        padding:
+            22px;
+
+    }
+
+}
+/* =========================================
+   ROBOT IA
+========================================= */
+
+.robot-ia {
+
+    position: absolute;
+
+    right: 5%;
+
+    top: 50%;
+
+    width: 210px;
+
+    height: 270px;
+
+    transform:
+        translateY(-50%);
+
+    z-index: 5;
+
+    animation:
+        robotFlotar 4s ease-in-out infinite;
+
+    transition:
+        transform .2s ease-out;
+
+    filter:
+        drop-shadow(
+            0 25px 35px
+            rgba(0,0,0,.45)
+        );
+
+}
+
+
+/* =========================================
+   ANTENA
+========================================= */
+
+.robot-antena {
+
+    position: absolute;
+
+    width: 4px;
+
+    height: 35px;
+
+    background:
+        linear-gradient(
+            to bottom,
+            var(--cobre),
+            var(--celeste)
+        );
+
+    left: 50%;
+
+    top: -28px;
+
+    transform:
+        translateX(-50%);
+
+    border-radius: 10px;
+
+}
+
+
+.robot-antena span {
+
+    position: absolute;
+
+    width: 13px;
+
+    height: 13px;
+
+    border-radius: 50%;
+
+    background: var(--celeste);
+
+    left: 50%;
+
+    top: -6px;
+
+    transform:
+        translateX(-50%);
+
+    box-shadow:
+
+        0 0 10px
+        rgba(56,189,248,.8),
+
+        0 0 25px
+        rgba(56,189,248,.5);
+
+    animation:
+        antenaParpadear 1.8s
+        ease-in-out infinite;
+
+}
+
+
+/* =========================================
+   CABEZA
+========================================= */
+
+.robot-cabeza {
+
+    position: absolute;
+
+    width: 150px;
+
+    height: 105px;
+
+    left: 50%;
+
+    top: 20px;
+
+    transform:
+        translateX(-50%);
+
+    background:
+
+        linear-gradient(
+            145deg,
+            #263244,
+            #0f1724
+        );
+
+    border:
+
+        2px solid
+        rgba(56,189,248,.45);
+
+    border-radius:
+
+        35px 35px 25px 25px;
+
+    box-shadow:
+
+        inset 0 1px 1px
+        rgba(255,255,255,.12),
+
+        0 10px 30px
+        rgba(0,0,0,.35);
+
+}
+
+
+/* =========================================
+   OJOS
+========================================= */
+
+.robot-ojo {
+
+    position: absolute;
+
+    width: 30px;
+
+    height: 38px;
+
+    top: 27px;
+
+    background:
+
+        linear-gradient(
+            180deg,
+            #7dd3fc,
+            #0284c7
+        );
+
+    border-radius: 12px;
+
+    box-shadow:
+
+        0 0 12px
+        rgba(56,189,248,.9),
+
+        0 0 30px
+        rgba(56,189,248,.45);
+
+    animation:
+        ojosParpadear 4s infinite;
+
+}
+
+
+.ojo-izquierdo {
+
+    left: 32px;
+
+}
+
+
+.ojo-derecho {
+
+    right: 32px;
+
+}
+
+
+/* =========================================
+   BOCA
+========================================= */
+
+.robot-boca {
+
+    position: absolute;
+
+    left: 50%;
+
+    bottom: 12px;
+
+    transform:
+        translateX(-50%);
+
+    width: 45px;
+
+    height: 7px;
+
+    display: flex;
+
+    justify-content:
+        center;
+
+    align-items:
+        center;
+
+    gap: 4px;
+
+}
+
+
+.robot-boca span {
+
+    width: 5px;
+
+    height: 5px;
+
+    border-radius: 50%;
+
+    background: var(--cobre);
+
+    box-shadow:
+        0 0 6px
+        rgba(196,122,68,.7);
+
+}
+
+
+/* =========================================
+   CUERPO
+========================================= */
+
+.robot-cuerpo {
+
+    position: absolute;
+
+    width: 130px;
+
+    height: 105px;
+
+    left: 50%;
+
+    top: 125px;
+
+    transform:
+        translateX(-50%);
+
+    background:
+
+        linear-gradient(
+            145deg,
+            #1e293b,
+            #0b111b
+        );
+
+    border:
+
+        2px solid
+        rgba(196,122,68,.35);
+
+    border-radius:
+        22px;
+
+    box-shadow:
+
+        inset 0 1px 1px
+        rgba(255,255,255,.08),
+
+        0 15px 30px
+        rgba(0,0,0,.35);
+
+}
+
+
+/* =========================================
+   PANEL DEL CUERPO
+========================================= */
+
+.robot-panel {
+
+    position: absolute;
+
+    width: 70px;
+
+    height: 48px;
+
+    left: 50%;
+
+    top: 22px;
+
+    transform:
+        translateX(-50%);
+
+    display: flex;
+
+    justify-content:
+        center;
+
+    align-items:
+        center;
+
+    gap: 8px;
+
+    background: #080c13;
+
+    border:
+
+        1px solid
+        rgba(56,189,248,.25);
+
+    border-radius: 12px;
+
+}
+
+
+.robot-luz {
+
+    width: 8px;
+
+    height: 8px;
+
+    border-radius: 50%;
+
+    background: var(--celeste);
+
+    box-shadow:
+
+        0 0 8px
+        rgba(56,189,248,.8);
+
+    animation:
+        lucesRobot 1.5s
+        ease-in-out infinite;
+
+}
+
+
+.robot-luz:nth-child(2) {
+
+    animation-delay:
+        .25s;
+
+}
+
+
+.robot-luz:nth-child(3) {
+
+    animation-delay:
+        .5s;
+
+}
+
+
+/* =========================================
+   BRAZOS
+========================================= */
+
+.robot-brazo {
+
+    position: absolute;
+
+    width: 25px;
+
+    height: 75px;
+
+    top: 140px;
+
+    background:
+
+        linear-gradient(
+            180deg,
+            #263244,
+            #111827
+        );
+
+    border:
+
+        2px solid
+        rgba(56,189,248,.25);
+
+    border-radius:
+        20px;
+
+}
+
+
+.brazo-izquierdo {
+
+    left: 15px;
+
+    transform:
+        rotate(15deg);
+
+}
+
+
+.brazo-derecho {
+
+    right: 15px;
+
+    transform:
+        rotate(-15deg);
+
+}
+
+
+/* =========================================
+   ANIMACIÓN DEL ROBOT
+========================================= */
+
+@keyframes robotFlotar {
+
+    0%,
+    100% {
+
+        margin-top: 0;
+
+    }
+
+    50% {
+
+        margin-top: -15px;
+
+    }
+
+}
+
+
+@keyframes antenaParpadear {
+
+    0%,
+    100% {
+
+        opacity: .5;
+
+        transform:
+            translateX(-50%)
+            scale(.8);
+
+    }
+
+    50% {
+
+        opacity: 1;
+
+        transform:
+            translateX(-50%)
+            scale(1.2);
+
+    }
+
+}
+
+
+@keyframes ojosParpadear {
+
+    0%,
+    45%,
+    48%,
+    100% {
+
+        transform:
+            scaleY(1);
+
+    }
+
+    46%,
+    47% {
+
+        transform:
+            scaleY(.1);
+
+    }
+
+}
+
+
+@keyframes lucesRobot {
+
+    0%,
+    100% {
+
+        opacity: .4;
+
+    }
+
+    50% {
+
+        opacity: 1;
+
+    }
+
+}
+
+
+/* =========================================
+   MENSAJE DEL ROBOT
+========================================= */
+
+.robot-mensaje {
+
+    position: absolute;
+
+    right: 4%;
+
+    top: calc(50% + 150px);
+
+    z-index: 10;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 2px;
+
+    padding: 12px 16px;
+
+    background:
+        rgba(8,11,18,.9);
+
+    border:
+
+        1px solid
+        rgba(56,189,248,.25);
+
+    border-radius: 12px;
+
+    color: white;
+
+    opacity: 0;
+
+    transform:
+        translateY(10px);
+
+    pointer-events: none;
+
+    transition:
+        .3s ease;
+
+    box-shadow:
+
+        0 15px 35px
+        rgba(0,0,0,.3);
+
+}
+
+
+.robot-mensaje strong {
+
+    color: var(--celeste);
+
+}
+
+
+.robot-mensaje span {
+
+    color: #94a3b8;
+
+    font-size: .8rem;
+
+}
+
+
+.robot-ia:hover + .robot-mensaje {
+
+    opacity: 1;
+
+    transform:
+        translateY(0);
+
+}
+
+
+/* =========================================
+   RESPONSIVE DEL ROBOT
+========================================= */
+
+@media (max-width: 900px) {
+
+    .robot-ia {
+
+        opacity: .35;
+
+        right: -20px;
+
+        transform:
+            translateY(-50%)
+            scale(.8);
+
+    }
+
+
+    .robot-mensaje {
+
+        display: none;
+
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .robot-ia {
+
+        display: none;
+
+    }
+
+}
+/* =========================================
+   ASISTENTE IA
+========================================= */
+
+.asistente-ia {
+
+    position: fixed;
+
+    right: 30px;
+
+    bottom: 30px;
+
+    width: 350px;
+
+    max-width: calc(100% - 40px);
+
+    background: #080b12;
+
+    border: 1px solid
+        rgba(56,189,248,.3);
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    z-index: 9999;
+
+    box-shadow:
+
+        0 25px 70px
+        rgba(0,0,0,.45);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform:
+        translateY(20px)
+        scale(.95);
+
+    transition:
+        .3s ease;
+
+}
+
+
+.asistente-ia.abierto {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transform:
+        translateY(0)
+        scale(1);
+
+}
+
+
+/* CABECERA */
+
+.asistente-cabecera {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 16px 18px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #111827,
+            #080b12
+        );
+
+    border-bottom:
+        1px solid #1e293b;
+
+}
+
+
+.asistente-cabecera strong {
+
+    display: block;
+
+    color: white;
+
+}
+
+
+.asistente-cabecera small {
+
+    color: var(--celeste);
+
+    font-size: .7rem;
+
+}
+
+
+#cerrarAsistente {
+
+    border: none;
+
+    background: transparent;
+
+    color: #94a3b8;
+
+    font-size: 1.6rem;
+
+    cursor: pointer;
+
+    transition: .2s;
+
+}
+
+
+#cerrarAsistente:hover {
+
+    color: white;
+
+    transform:
+        rotate(90deg);
+
+}
+
+
+/* CONTENIDO */
+
+.asistente-contenido {
+
+    height: 230px;
+
+    padding: 18px;
+
+    overflow-y: auto;
+
+}
+
+
+.mensaje-robot {
+
+    background: #111827;
+
+    border:
+        1px solid #1e293b;
+
+    color: #cbd5e1;
+
+    padding: 14px;
+
+    border-radius:
+        12px 12px 12px 3px;
+
+    font-size: .9rem;
+
+    line-height: 1.6;
+
+}
+
+
+/* OPCIONES */
+
+.asistente-opciones {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 8px;
+
+    padding: 14px;
+
+    border-top:
+        1px solid #1e293b;
+
+}
+
+
+.asistente-opciones button {
+
+    border:
+        1px solid #334155;
+
+    background: #111827;
+
+    color: #cbd5e1;
+
+    padding: 10px;
+
+    border-radius: 9px;
+
+    cursor: pointer;
+
+    font-family: inherit;
+
+    transition: .25s;
+
+}
+
+
+.asistente-opciones button:hover {
+
+    border-color:
+        var(--celeste);
+
+    color:
+        var(--celeste);
+
+    transform:
+        translateY(-2px);
+
+}
+
+
+/* BURBUJA DEL ROBOT */
+
+.robot-mensaje {
+
+    cursor: pointer;
+
+}
+
+
+@media (max-width: 500px) {
+
+    .asistente-ia {
+
+        right: 15px;
+
+        bottom: 15px;
+
+        width:
+            calc(100% - 30px);
+
+    }
+
+}
+/* =========================================
+   LECCIONES DEL CURSO
+========================================= */
+
+.lecciones-tema {
+
+    margin-top: 35px;
+
+    padding: 30px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #f8fafc,
+            #ffffff
+        );
+
+    border: 1px solid
+        #e2e8f0;
+
+    border-radius: 18px;
+
+}
+
+
+.lecciones-cabecera {
+
+    display: flex;
+
+    justify-content:
+        space-between;
+
+    align-items: center;
+
+    gap: 20px;
+
+    margin-bottom: 25px;
+
+}
+
+
+.lecciones-etiqueta {
+
+    color: var(--cobre);
+
+    font-size: .7rem;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+}
+
+
+.lecciones-cabecera h3 {
+
+    margin-top: 5px;
+
+    font-size: 1.5rem;
+
+    color: var(--negro);
+
+}
+
+
+.contador-lecciones {
+
+    padding: 8px 13px;
+
+    border-radius: 50px;
+
+    background: #f1f5f9;
+
+    color: #475569;
+
+    font-size: .8rem;
+
+    font-weight: 700;
+
+}
+
+
+/* =========================================
+   TARJETA DE LECCIÓN
+========================================= */
+
+.lista-lecciones {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+
+}
+
+
+.leccion {
+
+    display: grid;
+
+    grid-template-columns:
+        55px 1fr auto;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 18px;
+
+    background: white;
+
+    border: 1px solid
+        #e2e8f0;
+
+    border-radius: 14px;
+
+    transition:
+        transform .25s ease,
+        border-color .25s ease,
+        box-shadow .25s ease;
+
+}
+
+
+.leccion:hover {
+
+    transform:
+        translateX(5px);
+
+    border-color:
+        rgba(56,189,248,.5);
+
+    box-shadow:
+        0 10px 25px
+        rgba(15,23,42,.07);
+
+}
+
+
+/* =========================================
+   NÚMERO
+========================================= */
+
+.numero-leccion {
+
+    width: 45px;
+
+    height: 45px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background:
+        #0f172a;
+
+    color:
+        var(--celeste);
+
+    font-weight: 800;
+
+    font-size: .85rem;
+
+}
+
+
+/* =========================================
+   CONTENIDO
+========================================= */
+
+.contenido-leccion span {
+
+    font-size: .65rem;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+
+    color:
+        var(--cobre);
+
+}
+
+
+.contenido-leccion h4 {
+
+    margin:
+        4px 0 5px;
+
+    font-size: 1rem;
+
+    color:
+        var(--negro);
+
+}
+
+
+.contenido-leccion p {
+
+    margin: 0;
+
+    color:
+        #64748b;
+
+    font-size: .85rem;
+
+    line-height: 1.5;
+
+}
+
+
+/* =========================================
+   ESTADO
+========================================= */
+
+.estado-leccion {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+}
+
+
+.estado {
+
+    font-size: .75rem;
+
+    color: #64748b;
+
+    white-space: nowrap;
+
+}
+
+
+.boton-leccion {
+
+    border: 1px solid
+        var(--celeste);
+
+    background: white;
+
+    color:
+        #0284c7;
+
+    padding:
+        9px 14px;
+
+    border-radius: 8px;
+
+    font-family: inherit;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: .25s;
+
+}
+
+
+.boton-leccion:hover {
+
+    background:
+        var(--celeste);
+
+    color:
+        var(--negro);
+
+    transform:
+        translateY(-2px);
+
+}
+
+
+/* =========================================
+   LECCIÓN COMPLETADA
+========================================= */
+
+.leccion.completada {
+
+    border-color:
+        #86efac;
+
+    background:
+        #f0fdf4;
+
+}
+
+
+.leccion.completada
+.numero-leccion {
+
+    background:
+        #16a34a;
+
+    color: white;
+
+}
+
+
+.leccion.completada
+.estado {
+
+    color:
+        #15803d;
+
+    font-weight: 700;
+
+}
+
+
+.leccion.completada
+.boton-leccion {
+
+    border-color:
+        #22c55e;
+
+    background:
+        #dcfce7;
+
+    color:
+        #15803d;
+
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .lecciones-tema {
+
+        padding: 20px;
+
+    }
+
+
+    .leccion {
+
+        grid-template-columns:
+            45px 1fr;
+
+        gap: 14px;
+
+    }
+
+
+    .estado-leccion {
+
+        grid-column: 2;
+
+        justify-content:
+            space-between;
+
+    }
+
+
+    .numero-leccion {
+
+        width: 40px;
+
+        height: 40px;
+
+    }
+
+}
+/* =========================================
+   LECCIONES DEL CURSO
+========================================= */
+
+.lecciones-tema {
+    margin-top: 35px;
+    padding: 30px;
+    background: linear-gradient(145deg, #f8fafc, #ffffff);
+    border: 1px solid #e2e8f0;
+    border-radius: 18px;
+}
+
+/* ...resto del bloque... */
+/* =========================================
+   CORRECCIÓN DE ANCLAS DEL TEMARIO
+========================================= */
+
+#temario,
+#html,
+#css,
+#javascript,
+#desarrollo {
+    scroll-margin-top: 100px;
+}
+/* =========================================
+   ANCLAS DEL MENÚ
+========================================= */
+
+#temario,
+#html,
+#css,
+#javascript,
+#desarrollo,
+#proyecto {
+    scroll-margin-top: 140px;
+}
+/* =========================================
+   DASHBOARD DEL ALUMNO
+========================================= */
+
+.dashboard {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 30px;
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #f8fafc
+        );
+    border: 1px solid #e2e8f0;
+    border-radius: 22px;
+    box-shadow:
+        0 20px 50px rgba(15, 23, 42, .08);
+}
+
+
+/* =========================================
+   CABECERA
+========================================= */
+
+.dashboard-cabecera {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+.dashboard-etiqueta {
+    display: block;
+    margin-bottom: 7px;
+    color: var(--cobre);
+    font-size: .7rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.dashboard-cabecera h2 {
+    margin: 0;
+    color: var(--negro);
+    font-size: 2rem;
+}
+
+.dashboard-cabecera p {
+    margin: 8px 0 0;
+    color: #64748b;
+    font-size: .95rem;
+}
+
+
+/* =========================================
+   NIVEL
+========================================= */
+
+.nivel-alumno {
+    min-width: 90px;
+    padding: 15px 20px;
+    text-align: center;
+
+    background:
+        linear-gradient(
+            145deg,
+            #0f172a,
+            #1e293b
+        );
+
+    border: 1px solid
+        rgba(56, 189, 248, .35);
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 10px 25px
+        rgba(15, 23, 42, .18);
+}
+
+.nivel-alumno span {
+    display: block;
+    color: #94a3b8;
+    font-size: .65rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.nivel-alumno strong {
+    display: block;
+    margin-top: 3px;
+    color: var(--celeste);
+    font-size: 2rem;
+}
+
+
+/* =========================================
+   ESTADÍSTICAS
+========================================= */
+
+.dashboard-estadisticas {
+    display: grid;
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.estadistica {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+
+    padding: 18px;
+
+    background: white;
+
+    border: 1px solid
+        #e2e8f0;
+
+    border-radius: 15px;
+
+    transition:
+        transform .25s ease,
+        border-color .25s ease,
+        box-shadow .25s ease;
+}
+
+.estadistica:hover {
+    transform: translateY(-4px);
+
+    border-color:
+        rgba(56, 189, 248, .45);
+
+    box-shadow:
+        0 10px 25px
+        rgba(15, 23, 42, .07);
+}
+
+.estadistica-icono {
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #f1f5f9;
+
+    border-radius: 12px;
+
+    font-size: 1.3rem;
+}
+
+.estadistica span {
+    display: block;
+
+    color: #64748b;
+
+    font-size: .65rem;
+    font-weight: 800;
+
+    letter-spacing: 1px;
+}
+
+.estadistica strong {
+    display: block;
+
+    margin-top: 3px;
+
+    color: var(--negro);
+
+    font-size: 1.25rem;
+}
+
+
+/* =========================================
+   PROGRESO
+========================================= */
+
+.dashboard-progreso {
+    padding: 20px;
+
+    background: #f8fafc;
+
+    border:
+        1px solid #e2e8f0;
+
+    border-radius: 15px;
+
+    margin-bottom: 20px;
+}
+
+.progreso-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 10px;
+}
+
+.progreso-info span {
+    color: #475569;
+
+    font-size: .85rem;
+    font-weight: 700;
+}
+
+.progreso-info strong {
+    color: #0284c7;
+
+    font-size: .9rem;
+}
+
+.progreso-barra {
+    width: 100%;
+    height: 10px;
+
+    overflow: hidden;
+
+    background: #e2e8f0;
+
+    border-radius: 50px;
+}
+
+.progreso-barra-relleno {
+    width: 0;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--celeste),
+            #0284c7
+        );
+
+    border-radius: 50px;
+
+    transition:
+        width .5s ease;
+}
+
+
+/* =========================================
+   CONTINUAR APRENDIENDO
+========================================= */
+
+.continuar-aprendiendo {
+    display: flex;
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #0f172a,
+            #172033
+        );
+
+    border:
+        1px solid
+        rgba(56, 189, 248, .25);
+
+    border-radius: 17px;
+
+    box-shadow:
+        0 12px 30px
+        rgba(15, 23, 42, .15);
+}
+
+.continuar-icono {
+    width: 50px;
+    height: 50px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        rgba(56, 189, 248, .1);
+
+    border:
+        1px solid
+        rgba(56, 189, 248, .25);
+
+    border-radius: 14px;
+
+    font-size: 1.4rem;
+}
+
+.continuar-contenido {
+    flex: 1;
+}
+
+.continuar-contenido > span {
+    display: block;
+
+    color: var(--celeste);
+
+    font-size: .65rem;
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+}
+
+.continuar-contenido h3 {
+    margin: 5px 0;
+
+    color: white;
+
+    font-size: 1rem;
+}
+
+.continuar-contenido p {
+    margin: 0;
+
+    color: #94a3b8;
+
+    font-size: .8rem;
+}
+
+
+/* =========================================
+   BOTÓN CONTINUAR
+========================================= */
+
+.boton-continuar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 11px 17px;
+
+    border: none;
+
+    background:
+        var(--celeste);
+
+    color:
+        #082f49;
+
+    border-radius: 9px;
+
+    font-family: inherit;
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease;
+}
+
+.boton-continuar span {
+    font-size: 1.1rem;
+}
+
+.boton-continuar:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px
+        rgba(56, 189, 248, .3);
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+
+    .dashboard-estadisticas {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .dashboard {
+        margin: 25px 15px;
+        padding: 20px;
+    }
+
+    .dashboard-cabecera {
+        align-items: flex-start;
+    }
+
+    .dashboard-cabecera h2 {
+        font-size: 1.6rem;
+    }
+
+    .nivel-alumno {
+        min-width: 70px;
+        padding: 12px;
+    }
+
+    .nivel-alumno strong {
+        font-size: 1.6rem;
+    }
+
+    .continuar-aprendiendo {
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .continuar-contenido {
+        min-width: 200px;
+    }
+
+    .boton-continuar {
+        width: 100%;
+        justify-content: center;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .dashboard-estadisticas {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-cabecera {
+        flex-direction: column;
+    }
+
+    .nivel-alumno {
+        align-self: flex-start;
+    }
+
+}
