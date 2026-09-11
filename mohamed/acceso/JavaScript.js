@@ -13,7 +13,7 @@ formularioLogin.addEventListener("submit", function (evento) {
 
     if (usuario === "mohamed" && password === "1234") {
 
-        window.location.href = "../web.html";
+        window.location.href = "/tecweb/mohamed/web.html";
 
     } else {
 
