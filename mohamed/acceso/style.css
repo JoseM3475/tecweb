@@ -160,35 +160,33 @@ body {
 ========================================= */
 
 .panel {
-    width: 100%;
-    max-width: 1050px;
-    min-height: 600px;
-
+    width: 90%;
+    max-width: 900px;
+    min-height: 500px;
     display: grid;
-    grid-template-columns: 1.2fr 0.8fr;
+    grid-template-columns: 1fr 1fr;
 
     background: rgba(15, 23, 42, 0.88);
 
     border: 1px solid rgba(56, 189, 248, 0.25);
 
-    border-radius: 25px;
+    border-radius: 22px;
 
     overflow: hidden;
 
     box-shadow:
-        0 30px 80px rgba(0, 0, 0, 0.6),
-        0 0 80px rgba(56, 189, 248, 0.08);
+        0 25px 60px rgba(0, 0, 0, 0.6),
+        0 0 60px rgba(56, 189, 248, 0.08);
 
     backdrop-filter: blur(15px);
 }
-
 
 /* =========================================
    LADO IZQUIERDO
 ========================================= */
 
 .panel-izquierdo {
-    padding: 60px;
+    padding: 45px;
     display: flex;
     align-items: center;
 }
@@ -398,14 +396,12 @@ form button:hover {
     position: relative;
 
     display: flex;
-
     align-items: center;
-
     justify-content: center;
 
     text-align: center;
 
-    padding: 50px;
+    padding: 40px;
 
     background:
         radial-gradient(
