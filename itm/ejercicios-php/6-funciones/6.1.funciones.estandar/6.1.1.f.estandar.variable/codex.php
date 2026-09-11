@@ -1,14 +1,17 @@
 <?php
 
-echo "Hola mundo, soy un archivo PHP apto para servidores y contengo varias funciones estandar que actúan sobre variables:<br>
+echo "Hola mundo, soy un archivo PHP apto para servidores y contengo varias funciones estandar que actúan sobre variables:<br><br>";
 
-Función----------¿Qué comprueba?----------Ejemplo<br>
-empty()	         Si está vacía	          empty(\$nombre)<br>
-isset()	         Si contiene un valor	  isset(\$nombre)<br>
-is_int()	     Si es entero	          is_int(10)<br>
-is_numeric()	 Si es numérico	          is_numeric('25')<br>
-is_string()	     Si es texto	          is_string('Hola')<br>
-is_array()	     Si es un array	          is_array([1, 2])<br>";
+echo "<pre>
+Función----------¿Qué comprueba?----------Ejemplo
+
+empty()----------Si está vacía-----------empty(\$nombre)
+isset()----------Si contiene un valor----isset(\$nombre)
+is_int()---------Si es entero------------is_int(10)
+is_numeric()-----Si es numérico-----------is_numeric('25')
+is_string()------Si es texto--------------is_string('Hola')
+is_array()-------Si es un array-----------is_array([1, 2])
+</pre>";
 
 echo "<br>";
 
