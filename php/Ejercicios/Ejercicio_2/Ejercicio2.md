@@ -1,4 +1,4 @@
-#PHP. Ejercicio 2.
+# PHP. Ejercicio 2.
 
 Mejora el Ejercicio 1 con las siguientes funcionalidades.
 
