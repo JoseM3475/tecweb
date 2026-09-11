@@ -4,25 +4,21 @@
 
 const formularioLogin = document.getElementById("formLogin");
 
-if (formularioLogin) {
+formularioLogin.addEventListener("submit", function (evento) {
 
-    formularioLogin.addEventListener("submit", function(evento) {
+    evento.preventDefault();
 
-        evento.preventDefault();
+    const usuario = document.getElementById("usuario").value;
+    const password = document.getElementById("password").value;
 
-        const usuario = document.getElementById("usuario").value;
-        const password = document.getElementById("password").value;
+    if (usuario === "mohamed" && password === "1234") {
 
-        if (usuario === "mohamed" && password === "1234") {
+        window.location.href = "../web.html";
 
-            window.location.href = "../web.html";
+    } else {
 
-        } else {
+        alert("Usuario o contraseña incorrectos");
 
-            alert("Usuario o contraseña incorrectos");
+    }
 
-        }
-
-    });
-
-}
+});
