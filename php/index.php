@@ -12,6 +12,8 @@
     <br>
     <a href="formularios/seleccionar_dni.php">Seleccionar por DNI</a>
     <br>
+    <a href="formularios/nueva_persona.php">Nueva persona</a>
+    <br>
     
 
 </body>
