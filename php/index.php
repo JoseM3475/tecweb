@@ -14,6 +14,7 @@
     <br>
     <a href="formularios/nueva_persona.php">Nueva persona</a>
     <br>
+    <a href="formularios/seleccionar_dni_actualizar.php">Editar persona</a>
     
 
 </body>
