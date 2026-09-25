@@ -82,6 +82,10 @@ CREATE USER php_prueba WITH PASSWORD 'TuPasswordSegura';
 -- Permitir que se conecte a la base de datos
 GRANT CONNECT ON DATABASE phptecweb TO php_prueba;
 
+GRANT USAGE ON SCHEMA public TO php_prueba;
+
+GRANT CREATE ON SCHEMA public TO php_prueba;
+
 -- Permitir el uso del esquema
 GRANT USAGE ON SCHEMA public TO php_prueba;
 
