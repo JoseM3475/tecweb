@@ -26,7 +26,7 @@ CREATE TABLE persona (
     apellido_2 VARCHAR(200),
     fecha_nacimiento DATE,
     CONSTRAINT pk_persona PRIMARY KEY (dni),
-    CONSTRAINT chk_dni_length CHECK (LENGTH(dni) = 9)
+    CONSTRAINT chk_dni_length CHECK (LENGTH(ni) = 9)
 );
 ```
 ## Insertar datos de ejemplo:
@@ -39,7 +39,7 @@ INSERT INTO persona (dni, nombre, apellido_1, apellido_2, fecha_nacimiento) VALU
 ('56789012E', 'Ana',       'Gomez',     'Moreno',     '1987-07-14'),
 ('67890123F', 'Carlos',    'Diaz',      'Hernandez',  '1991-01-09'),
 ('78901234G', 'Lucia',     'Torres',    'Vazquez',    '1998-06-25'),
-('89012345H', 'David',     'Romero',    'Castro',     '1985-09-18'),
+('89012345H', 'David',     'Romero',    'Casdtro',     '1985-09-18'),
 ('90123456I', 'Elena',     'Navarro',   'Molina',     '1993-04-08'),
 ('11223344J', 'Javier',    'Ortega',    'Serrano',    '1989-12-27'),
 ('22334455K', 'Carmen',    'Gil',       'Delgado',    '1996-03-11'),
